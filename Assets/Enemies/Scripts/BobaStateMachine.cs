@@ -47,22 +47,25 @@ public class BobaStateMachine : MonoBehaviour
 
     //Fly variables
     Vector3 FPos;
+
     private Vector3 tempPos;
-    private bool GoFly = true;
+
+    public float flyUp = 5;
     public float flyTime = 10;
-    private float upAndDown;
     
+
     int JmpTme = 0;
     void Start()
     {
         Plyr = GameObject.FindGameObjectWithTag("Player").transform;
         AI = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
+
         isIdle = true;
         IPos = transform.position;
         IRot = transform.forward;
 
-        
+
 
         enter = new Dictionary<State, System.Action>()
         {
@@ -154,6 +157,8 @@ public class BobaStateMachine : MonoBehaviour
     void entK()
     {
         KillOnce = true;
+        flyUp = 5;
+
     }
     void extK()
     {
@@ -165,7 +170,7 @@ public class BobaStateMachine : MonoBehaviour
         //JmpTme = (JmpTme + Random.Range(0, 3)) % 550;
         //if (JmpTme > 385 && isBoba) { SelectedPre = Rocket; SelectedF = RocketF; }
         //else { SelectedPre = BlastetBolt; SelectedF = BlasterBoltF; }
-
+        InvokeRepeating("FlyUp", 0f, 2f);
         //circle luke
         if (KillOnce)
         {
@@ -186,7 +191,7 @@ public class BobaStateMachine : MonoBehaviour
         {
             Transition(State.Idle);
         }
-        if (GoFly)
+        if (flyUp < 0)
         {
             Transition(State.Fly);
         }
@@ -196,6 +201,10 @@ public class BobaStateMachine : MonoBehaviour
         Vector2 tempv2 = Random.insideUnitCircle;
         KPos = (Plyr.transform.position + (Random.RandomRange(7, 13) * Plyr.transform.forward) + (Random.Range(6, 12) * new Vector3(tempv2.x, 0f, tempv2.y)));//Roberto changed this It add a bit more randoness to the behavior
         AI.destination = KPos;
+    }
+    void FlyUp()
+    {
+        flyUp -= 1 * Time.deltaTime;
     }
     //void Fire()
     //{
@@ -214,14 +223,8 @@ public class BobaStateMachine : MonoBehaviour
     //F: e
     void entF()
     {
-
-        Debug.Log("Gonna Fly");
-        tempPos = transform.position;
         flyTime = 10;
-        Vector3 tempv3 = Random.insideUnitCircle;
-        FPos = (Plyr.transform.position + (Random.RandomRange(3, 6) * Plyr.transform.up) + (Random.Range(3, 6) * new Vector3(tempv3.x, tempv3.y, tempv3.z)));
-        
-
+        Debug.Log("Gonna Fly");
     }
     void extF()
     {
@@ -232,12 +235,23 @@ public class BobaStateMachine : MonoBehaviour
 
         //auto transition, its in the coroutine
         //big jetpack jump
-        Debug.Log(FPos.y);
-        transform.LookAt(Plyr.position);
-        AI.SetDestination(FPos);
-        //InvokeRepeating("FlyCountDown", 0f, 8f);
-        //if (flyTime > 0)
-        //    StartCoroutine(JetpackJump());
+        StartCoroutine(JetpackJump());
+
+        Vector3 direction = Plyr.position - transform.position;
+
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
+                                            Quaternion.LookRotation(direction), 0.1f);
+        InvokeRepeating("FlyCountDown", 0f, 2f);
+
+        if (flyTime > 0)
+            StartCoroutine(JetpackJump());
+        else if (flyTime < 0)
+        {
+            if (InRange() && CanSee())
+                Transition(State.KillLuke);
+            else
+                Transition(State.Idle);
+        }
         //else
         //{
         //    StartCoroutine(FlyDown());
@@ -247,26 +261,24 @@ public class BobaStateMachine : MonoBehaviour
         //        Transition(State.Idle);
         //}
     }
-    IEnumerator FlyDown()//the jetpack jump boba does.
-    {
-        while (tempPos.y < transform.position.y)
-        {
-            transform.position += new Vector3(0, -0.017f, 0f);
-            yield return new WaitForSecondsRealtime(.001f);
-        }
-    }
+    
     IEnumerator JetpackJump()//the jetpack jump boba does.
     {
-        
-        while (FPos.y > transform.position.y)
+        float tempf = 0;
+        AI.speed = SPD * 8;
+        while (tempf < 257)
         {
             transform.position += new Vector3(0, 0.017f, 0f);
-            
+            tempf += 1;
             yield return new WaitForSecondsRealtime(.001f);
         }
+        AI.speed = SPD;
+        
     }
+
     void FlyCountDown()
     {
         flyTime -= 1 * Time.deltaTime;
     }
+    
 }
