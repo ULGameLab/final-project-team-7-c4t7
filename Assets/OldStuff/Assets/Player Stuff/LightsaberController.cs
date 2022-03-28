@@ -47,7 +47,7 @@ public class LightsaberController : MonoBehaviour
         if (Input.GetButtonUp("Fire2"))
         {
             DeflectZone.SetActive(false);
-            BaseLightsaber.SetActive(true);
+           // BaseLightsaber.SetActive(true);
             AttackReady = true;
         }
 
@@ -99,7 +99,7 @@ public class LightsaberController : MonoBehaviour
         //RepulseTimer = 0f;
         yield return new WaitForSeconds(.05f);
         StrikeZone.SetActive(false);
-        BaseLightsaber.SetActive(true);
+     //   BaseLightsaber.SetActive(true);
     }
 
     IEnumerator AttackReadying()
