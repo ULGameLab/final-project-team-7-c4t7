@@ -30174,6 +30174,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: maria_prop_j_j_ong
       objectReference: {fileID: 0}
+    - target: {fileID: 1633917194968344634, guid: ffbdc517c9d50154b98d749f292402f9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633917194968344634, guid: ffbdc517c9d50154b98d749f292402f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93dc7e74d6d5ef543af1c4eaebf421ad, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbdc517c9d50154b98d749f292402f9, type: 3}
 --- !u!1 &1282088186
