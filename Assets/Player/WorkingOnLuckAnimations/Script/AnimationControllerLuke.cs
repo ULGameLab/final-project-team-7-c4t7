@@ -48,6 +48,23 @@ public class AnimationControllerLuke : MonoBehaviour
         else
         if (Input.GetKey("w"))
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                
+                LuckAnimatior.SetBool("Run", false);
+                LuckAnimatior.SetBool("Jump", true);
+                LuckAnimatior.SetBool("DashFront", false);
+                LuckAnimatior.SetBool("DashLeft", false);
+                LuckAnimatior.SetBool("DashRight", false);
+                LuckAnimatior.SetBool("Slash", false);
+                LuckAnimatior.SetBool("Force", false);
+                LuckAnimatior.SetBool("Block", false);
+                LuckAnimatior.SetBool("Idel", false);
+                LuckAnimatior.SetBool("RunJump", false);
+                LuckAnimatior.SetBool("RunForce", false);
+
+            }
+            else
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
@@ -98,6 +115,23 @@ public class AnimationControllerLuke : MonoBehaviour
         else
         if (Input.GetKey("s"))
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                LuckAnimatior.SetBool("Run", false);
+                LuckAnimatior.SetBool("Jump", true);
+                LuckAnimatior.SetBool("DashFront", false);
+                LuckAnimatior.SetBool("DashLeft", false);
+                LuckAnimatior.SetBool("DashRight", false);
+                LuckAnimatior.SetBool("Slash", false);
+                LuckAnimatior.SetBool("Force", false);
+                LuckAnimatior.SetBool("Block", false);
+                LuckAnimatior.SetBool("Idel", false);
+                LuckAnimatior.SetBool("RunJump", false);
+                LuckAnimatior.SetBool("RunForce", false);
+
+            }
+            else
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
@@ -147,6 +181,23 @@ public class AnimationControllerLuke : MonoBehaviour
         else
         if (Input.GetKey("a"))
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                LuckAnimatior.SetBool("Run", false);
+                LuckAnimatior.SetBool("Jump", true);
+                LuckAnimatior.SetBool("DashFront", false);
+                LuckAnimatior.SetBool("DashLeft", false);
+                LuckAnimatior.SetBool("DashRight", false);
+                LuckAnimatior.SetBool("Slash", false);
+                LuckAnimatior.SetBool("Force", false);
+                LuckAnimatior.SetBool("Block", false);
+                LuckAnimatior.SetBool("Idel", false);
+                LuckAnimatior.SetBool("RunJump", false);
+                LuckAnimatior.SetBool("RunForce", false);
+
+            }
+            else
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
@@ -196,6 +247,23 @@ public class AnimationControllerLuke : MonoBehaviour
         else
         if (Input.GetKey("d"))
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                LuckAnimatior.SetBool("Run", false);
+                LuckAnimatior.SetBool("Jump", true);
+                LuckAnimatior.SetBool("DashFront", false);
+                LuckAnimatior.SetBool("DashLeft", false);
+                LuckAnimatior.SetBool("DashRight", false);
+                LuckAnimatior.SetBool("Slash", false);
+                LuckAnimatior.SetBool("Force", false);
+                LuckAnimatior.SetBool("Block", false);
+                LuckAnimatior.SetBool("Idel", false);
+                LuckAnimatior.SetBool("RunJump", false);
+                LuckAnimatior.SetBool("RunForce", false);
+
+            }
+            else
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
