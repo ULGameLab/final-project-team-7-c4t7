@@ -10,7 +10,7 @@ public class AnimationControllerLuke : MonoBehaviour
     {
         
     }
-
+    // in case of hit find script of trigger collision and add this GetComponent<AnimationControllerLuke>().LuckAnimatior.SetBool("Hit", true); 
     // Update is called once per frame
     void Update()
     {
@@ -457,6 +457,8 @@ public class AnimationControllerLuke : MonoBehaviour
             LuckAnimatior.SetBool("Idel", true);
             LuckAnimatior.SetBool("RunJump", false);
             LuckAnimatior.SetBool("RunForce", false);
+            LuckAnimatior.SetBool("Hit", false);
+            LuckAnimatior.SetBool("Dead", false);
         }
     }
 }
