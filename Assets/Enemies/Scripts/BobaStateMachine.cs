@@ -28,23 +28,25 @@ public class BobaStateMachine : MonoBehaviour
 
     //KillLuke variables
     [Tooltip("255 for boba")]
-    public float VisRng;
+    public float VisRng = 225;
     [Tooltip("distance to see luke, probably 25")]
-    public float VisDist;
+    public float VisDist = 25;
     //public AudioSource sounds;
     //public AudioClip pew;
     bool KillOnce;
     Vector3 KPos;
-    //public Transform GunTipT;
+    public Transform GunTipT;
     //GameObject SelectedPre;
-    //GameObject Fired;
-    //public GameObject BlastetBolt;
-    //public GameObject Rocket;
+    GameObject Fired;
+    private GameObject BulletType;
+    public GameObject BlastetBolt;
+    public GameObject Rocket;
     //int rocketMult = 3;
     //float SelectedF;
     //public float BlasterBoltF = 5.5f;
     //public float RocketF = 1.7f;
-
+    private float fireGun;
+    public float whenToFire = 10000;
     //Fly variables
     Vector3 FPos;
 
@@ -158,11 +160,14 @@ public class BobaStateMachine : MonoBehaviour
     {
         KillOnce = true;
         flyUp = 5;
+        BulletType = BlastetBolt;
+        
 
     }
     void extK()
     {
         StopCoroutine("Strafe");
+        StopCoroutine("FlyUp");
     }
     void excK()
     {
@@ -171,6 +176,7 @@ public class BobaStateMachine : MonoBehaviour
         //if (JmpTme > 385 && isBoba) { SelectedPre = Rocket; SelectedF = RocketF; }
         //else { SelectedPre = BlastetBolt; SelectedF = BlasterBoltF; }
         InvokeRepeating("FlyUp", 0f, 2f);
+        fireGun += Random.Range(0, 100);
         //circle luke
         if (KillOnce)
         {
@@ -181,6 +187,14 @@ public class BobaStateMachine : MonoBehaviour
         //shoot luke
         transform.LookAt(Plyr.transform);
 
+        if (fireGun > whenToFire)
+        {
+            Fire();
+            if (Random.Range(0, 3) == 0)
+                fireGun = fireGun - (whenToFire / 10);
+            else
+                fireGun = fireGun - whenToFire;
+        }
         //instantiate bullets here
         //if (SelectedPre == Rocket) { if (JmpTme % 70 * rocketMult == 0) { Fire(); } }
         //else { if (JmpTme % 70 == 0) { Fire(); } }
@@ -206,29 +220,32 @@ public class BobaStateMachine : MonoBehaviour
     {
         flyUp -= 1 * Time.deltaTime;
     }
-    //void Fire()
-    //{
-    //    sounds.PlayOneShot(pew);
-    //    Fired = Instantiate(SelectedPre);
-    //    Fired.transform.position = GunTipT.position;
-    //    Fired.transform.rotation = GunTipT.rotation;
-    //    Fired.GetComponent<Rigidbody>().mass = .2f;
-    //
-    //    Vector3 FinalF = (GunTipT.forward * SelectedF);
-    //
-    //    Fired.GetComponent<Rigidbody>().velocity = transform.GetComponent<Rigidbody>().velocity;
-    //    Fired.GetComponent<Rigidbody>().AddForce(FinalF, ForceMode.Impulse);
-    //}
+    void Fire()
+    {
+        //sounds.PlayOneShot(pew);
+        Fired = Instantiate(BulletType, GunTipT.position, Quaternion.identity);
+
+        Fired.GetComponent<Rigidbody>().mass = .2f;
+
+        Vector3 bulletDirection = Plyr.position - Fired.transform.position;
+        Fired.transform.forward = bulletDirection.normalized;
+
+        Fired.GetComponent<Rigidbody>().useGravity = false;
+        Fired.GetComponent<Rigidbody>().angularDrag = 0;
+
+        Fired.GetComponent<Rigidbody>().AddForce(bulletDirection * 1f, ForceMode.Impulse);
+    }
 
     //F: e
     void entF()
     {
         flyTime = 10;
-        Debug.Log("Gonna Fly");
+        BulletType = Rocket;
+        
     }
     void extF()
     {
-
+        StopCoroutine("FlyCountDown");
     }
     void excF()
     {
@@ -236,12 +253,20 @@ public class BobaStateMachine : MonoBehaviour
         //auto transition, its in the coroutine
         //big jetpack jump
         StartCoroutine(JetpackJump());
-
+        InvokeRepeating("FlyCountDown", 0f, 2f);
         Vector3 direction = Plyr.position - transform.position;
 
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
                                             Quaternion.LookRotation(direction), 0.1f);
-        InvokeRepeating("FlyCountDown", 0f, 2f);
+
+        if (fireGun > whenToFire)
+        {
+            Fire();
+            if (Random.Range(0, 3) == 0)
+                fireGun = fireGun - (whenToFire / 10);
+            else
+                fireGun = fireGun - whenToFire;
+        }
 
         if (flyTime > 0)
             StartCoroutine(JetpackJump());

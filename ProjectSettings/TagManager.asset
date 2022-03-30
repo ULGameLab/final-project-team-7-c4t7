@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - ObjectF
   - PatrolTarget
+  - Collectables
+  - badCollectables
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

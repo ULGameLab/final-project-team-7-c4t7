@@ -172,8 +172,17 @@ public class NMEStateMachine : MonoBehaviour
         transform.LookAt(Plyr.transform);
 
         //instantiate bullets here
-        if (SelectedPre == Rocket) { if (JmpTme % 70 * rocketMult == 0) { Fire(); } }
-        else { if (JmpTme % 70 == 0) { Fire(); } }
+        if (SelectedPre == Rocket)
+        {
+            if (JmpTme % 70 * rocketMult == 0) {
+                Fire();
+            }
+        }
+        else
+        {
+            if (JmpTme % 70 == 0) { Fire();
+            }
+        }
 
         //transitions
         //Debug.Log("execute KillLuke");

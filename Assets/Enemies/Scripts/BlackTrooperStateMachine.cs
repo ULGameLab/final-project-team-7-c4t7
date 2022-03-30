@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
-public class TrooperStateMachine : MonoBehaviour
+public class BlackTrooperStateMachine : MonoBehaviour
 {
-
-    public enum State { Idle, KillLuke ,Patrol}
+    public enum State { Idle, KillLuke, Patrol,Punch }
     public State CurState;
     private Transform Plyr;
     private UnityEngine.AI.NavMeshAgent AI;
@@ -31,38 +29,37 @@ public class TrooperStateMachine : MonoBehaviour
     public float VisRng = 175;
     [Tooltip("distance to see luke, probably 25")]
     public float VisDist = 25;
-    public AudioSource sounds;
-    public AudioClip pew;
+    //public AudioSource sounds;
+    //public AudioClip pew;
     bool KillOnce;
     Vector3 KPos;
     public Transform GunTipT;
-    private float fireGun;
-    public float whenToFire = 10000;
     //GameObject SelectedPre;
     GameObject Fired;
     public GameObject BulletType;
     //public GameObject Rocket;
     //int rocketMult = 3;
     //float SelectedF;
-    public float BlasterBoltF = 5.5f;
-    private int numberOfBullets;
-    
-    
+    //public float BlasterBoltF = 5.5f;
+    //public float RocketF = 1.7f;
+
+    private float fireGun;
+    public float whenToFire = 10000;
 
     //Patrol Variables
-    public bool willPatrol = true;
+    public bool willPatrol;
     private bool onPatrol;//determine if to enter Patrol State
     public float idleTime = 5; //seconds there is before object starts to patrol from idle state;
     private float patrolTime;
-    
+
     private Transform PatrolTarget;//nearest Patrol Way
     private Transform pTarget1; //child of Patrol or the first patrol point
     private Transform pTarget2; //child of Patrol or the 2nd patrol point
     private Transform pTarget;
     private Transform tempTarget;
 
-    
-    
+    //Punch Variables
+    public float punchDistance = 2;
 
 
     // Start is called before the first frame update
@@ -72,7 +69,7 @@ public class TrooperStateMachine : MonoBehaviour
         AI = GetComponent<UnityEngine.AI.NavMeshAgent>();
         patrolTime = idleTime;
 
-        
+
         isIdle = true;
         IPos = transform.position;
         IRot = transform.forward;
@@ -81,27 +78,30 @@ public class TrooperStateMachine : MonoBehaviour
         {
             {State.Idle, entI },
             {State.KillLuke, entK },
-            {State.Patrol,entP }
+            {State.Patrol,entP },
+            {State.Punch,entPu }
         };
         exit = new Dictionary<State, System.Action>()
         {
             {State.Idle, extI },
             {State.KillLuke, extK },
-            {State.Patrol,extP }
+            {State.Patrol,extP },
+            {State.Punch,extPu }
 
         };
         execute = new Dictionary<State, System.Action>()
         {
             {State.Idle, excI },
             {State.KillLuke, excK },
-            {State.Patrol,excP }
+            {State.Patrol,excP },
+            {State.Punch,excPu }
 
         };
 
         CurState = State.Idle;
     }
 
-    
+
 
     void Update()
     {
@@ -162,7 +162,7 @@ public class TrooperStateMachine : MonoBehaviour
             }
         }
         //Debug.Log(willPatrol + "  " + " " + patrolTime + " " + " " +onPatrol);
-        if (willPatrol && patrolTime <0 && onPatrol)
+        if (willPatrol && patrolTime < 0 && onPatrol)
         {
             Transition(State.Patrol);
         }
@@ -191,7 +191,6 @@ public class TrooperStateMachine : MonoBehaviour
     void excK()
     {
 
-        
         fireGun += Random.Range(0, 100);
         //circle luke
         if (KillOnce)
@@ -201,20 +200,16 @@ public class TrooperStateMachine : MonoBehaviour
         }
 
         //shoot luke
-        
-        transform.LookAt(Plyr.position);
 
-        // Initiate Bullet
-        //if (Input.GetKeyDown(KeyCode.E))
-        
+        transform.LookAt(Plyr.position);
         if (fireGun > whenToFire)
         {
             Fire();
             if (Random.Range(0, 3) == 0)
-                fireGun = fireGun - (whenToFire /10);
+                fireGun = fireGun - (whenToFire / 10);
             else
                 fireGun = fireGun - whenToFire;
-        } 
+        }
         //transitions
         //Debug.Log("execute KillLuke");
         if (!CanSee()/*Input.GetKey(KeyCode.Q)*/)//replace with luke being out of signt
@@ -222,6 +217,11 @@ public class TrooperStateMachine : MonoBehaviour
             if (onPatrol) { Transition(State.Patrol); }
             else
                 Transition(State.Idle);
+        }
+
+        if (Mathf.Abs((Plyr.position - transform.position).magnitude) < punchDistance)
+        {
+            Transition(State.Punch);
         }
     }
     void Strafe()
@@ -232,20 +232,19 @@ public class TrooperStateMachine : MonoBehaviour
         transform.LookAt(KPos);
 
     }
-    
     void Fire()
     {
-        sounds.PlayOneShot(pew);
-        Fired = Instantiate(BulletType,GunTipT.position,Quaternion.identity);
-    
+        //sounds.PlayOneShot(pew);
+        Fired = Instantiate(BulletType, GunTipT.position, Quaternion.identity);
+
         Fired.GetComponent<Rigidbody>().mass = .2f;
-        
+
         Vector3 bulletDirection = Plyr.position - Fired.transform.position;
         Fired.transform.forward = bulletDirection.normalized;
 
         Fired.GetComponent<Rigidbody>().useGravity = false;
         Fired.GetComponent<Rigidbody>().angularDrag = 0;
-        
+
         Fired.GetComponent<Rigidbody>().AddForce(bulletDirection * 1f, ForceMode.Impulse);
     }
 
@@ -267,7 +266,7 @@ public class TrooperStateMachine : MonoBehaviour
 
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
                                             Quaternion.LookRotation(direction), 0.01f);
-      
+
         //Debug.Log((transform.position - pTarget.transform.position).magnitude);
         if (Mathf.Abs((transform.position - pTarget.transform.position).magnitude) < 1)
         {
@@ -281,7 +280,7 @@ public class TrooperStateMachine : MonoBehaviour
         }
 
     }
-    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "PatrolTarget")
@@ -299,6 +298,21 @@ public class TrooperStateMachine : MonoBehaviour
             onPatrol = false;
         }
     }
+    //Punch State
+    void entPu()
+    {
 
-    
+    }
+    void extPu()
+    {
+
+    }
+    void excPu()
+    {
+        
+        if (Mathf.Abs((Plyr.position - transform.position).magnitude) > punchDistance)
+        {
+            Transition(State.KillLuke);
+        }
+    }
 }
