@@ -10,6 +10,9 @@ public class PlayInput : MonoBehaviour {
     [SerializeField] private Transform UserCamera;
     public Transform TheDestination;
 
+    [SerializeField] public bool LockedOn;
+    [SerializeField] public Transform Target;
+
     // Repulsor
     public GameObject Cone;
     //Collider RepulsorCollider = Cone.GetComponent<Collider>();
