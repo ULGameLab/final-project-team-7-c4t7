@@ -8659,11 +8659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7439735065804384692, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_Center.x
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7439735065804384692, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_Center.y
-      value: 0.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7439735065804384693, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_Name
