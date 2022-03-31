@@ -10,6 +10,10 @@ public class PlayInput : MonoBehaviour {
     [SerializeField] private Transform UserCamera;
     public Transform TheDestination;
 
+    [SerializeField] public bool LockedOn;
+    [SerializeField] public Transform Target;
+    public Transform AimPoint;
+
     // Repulsor
     public GameObject Cone;
     //Collider RepulsorCollider = Cone.GetComponent<Collider>();
@@ -51,6 +55,12 @@ public class PlayInput : MonoBehaviour {
         Physics.Raycast(UserCamera.position, UserCamera.forward.normalized);
         Debug.DrawRay(transform.position, UserCamera.forward.normalized, Color.red);
         */
+
+        // Lock On
+        if (!LockedOn && Input.GetKey(KeyCode.X))
+        {
+            
+        }
 
     }
 
