@@ -8589,6 +8589,10 @@ PrefabInstance:
       propertyPath: LuckWalk
       value: 
       objectReference: {fileID: 8300000, guid: d22a104e7ee76584bbf945186d6ae89a, type: 3}
+    - target: {fileID: 3798189029652249449, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3876369075149075401, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -8646,12 +8650,28 @@ PrefabInstance:
       value: -1.324
       objectReference: {fileID: 0}
     - target: {fileID: 7439735065804384692, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439735065804384692, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439735065804384692, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Center.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439735065804384692, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7439735065804384693, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_Name
       value: newLukeTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439735065804384694, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7439735065804384694, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: groundMask.m_Bits
@@ -8708,6 +8728,14 @@ PrefabInstance:
     - target: {fileID: 8311547021702615769, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461462237126891325, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945437111565625268, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
