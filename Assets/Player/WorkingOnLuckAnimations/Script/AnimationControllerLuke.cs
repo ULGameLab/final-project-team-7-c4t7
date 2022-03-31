@@ -5,6 +5,8 @@ using UnityEngine;
 public class AnimationControllerLuke : MonoBehaviour
 {
     public Animator LuckAnimatior;
+    public AudioClip LuckWalk;
+    public AudioSource sounds;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +36,10 @@ public class AnimationControllerLuke : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
             {
+                
                 if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
                 {
+                    
                     Debug.Log("Blockkkk walking");
                     LuckAnimatior.SetBool("Run", false);
                     LuckAnimatior.SetBool("Jump", false);
@@ -122,6 +126,8 @@ public class AnimationControllerLuke : MonoBehaviour
         else   //&& !(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
         if (Input.GetKey("w"))
         {
+            if (!sounds.isPlaying)
+                //sounds.PlayOneShot(LuckWalk);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 
