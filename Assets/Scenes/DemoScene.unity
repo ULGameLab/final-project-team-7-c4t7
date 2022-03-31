@@ -3895,6 +3895,10 @@ PrefabInstance:
       propertyPath: LuckWalk
       value: 
       objectReference: {fileID: 8300000, guid: d22a104e7ee76584bbf945186d6ae89a, type: 3}
+    - target: {fileID: 5090780420747384486, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1338f4742550294bbaff3344d63c6eb, type: 2}
     - target: {fileID: 7009314680416170714, guid: 7d61ad328810f024688ba58965e9db4f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
