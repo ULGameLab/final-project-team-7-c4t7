@@ -4530,6 +4530,9 @@ MonoBehaviour:
   playerBody: {fileID: 7439735065804384695}
   UserCamera: {fileID: 7439735065409270541}
   TheDestination: {fileID: 8372181265518893843}
+  LockedOn: 0
+  Target: {fileID: 0}
+  AimPoint: {fileID: 0}
   Cone: {fileID: 886606302019453336}
   Wait: 3
 --- !u!114 &886606301024279549
@@ -4691,6 +4694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LuckAnimatior: {fileID: 1817127080846196889}
+  LuckWalk: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!1 &7883974263104973139
 GameObject:
   m_ObjectHideFlags: 0

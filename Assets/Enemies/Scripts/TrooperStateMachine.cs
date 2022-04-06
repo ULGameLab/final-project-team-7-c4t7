@@ -297,7 +297,7 @@ public class TrooperStateMachine : MonoBehaviour
     
     void Fire()
     {
-        sounds.PlayOneShot(pew);
+        //sounds.PlayOneShot(pew);
         Fired = Instantiate(BulletType,GunTipT.position,Quaternion.identity);
     
         Fired.GetComponent<Rigidbody>().mass = .2f;
