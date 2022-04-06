@@ -10,12 +10,33 @@ public class AnimationControllerLuke : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sounds.clip = LuckWalk;
+    }
+    void playWalk()
+    {
+        if (LuckAnimatior.GetBool("Run") || LuckAnimatior.GetBool("RunCrouched"))
+        {
+            if (!sounds.isPlaying)
+            {
+                Debug.Log("got in");
+                sounds.Play();
+            }
+        }
+        else
+        {
+            if (sounds.isPlaying)
+            {
+                Debug.Log("got out");
+                sounds.Stop();
+            }
+        }
         
     }
     // in case of hit find script of trigger collision and add this GetComponent<AnimationControllerLuke>().LuckAnimatior.SetBool("Hit", true); 
     // Update is called once per frame
     void Update()
     {
+        playWalk();
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Slashhhhh");
@@ -126,8 +147,7 @@ public class AnimationControllerLuke : MonoBehaviour
         else   //&& !(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
         if (Input.GetKey("w"))
         {
-            if (!sounds.isPlaying)
-                //sounds.PlayOneShot(LuckWalk);
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 
@@ -189,6 +209,7 @@ public class AnimationControllerLuke : MonoBehaviour
                 LuckAnimatior.SetBool("Idel", false);
                 LuckAnimatior.SetBool("RunJump", false);
                 LuckAnimatior.SetBool("RunForce", false);
+               // playWalk();
             }
             
         }
@@ -245,6 +266,7 @@ public class AnimationControllerLuke : MonoBehaviour
             }
             else
             {
+
                 LuckAnimatior.SetBool("Run", true);
                 LuckAnimatior.SetBool("Jump", false);
                 LuckAnimatior.SetBool("DashFront", false);
@@ -256,6 +278,7 @@ public class AnimationControllerLuke : MonoBehaviour
                 LuckAnimatior.SetBool("Idel", false);
                 LuckAnimatior.SetBool("RunJump", false);
                 LuckAnimatior.SetBool("RunForce", false);
+               // playWalk();
             }
         }
         else
@@ -322,6 +345,7 @@ public class AnimationControllerLuke : MonoBehaviour
                 LuckAnimatior.SetBool("Idel", false);
                 LuckAnimatior.SetBool("RunJump", false);
                 LuckAnimatior.SetBool("RunForce", false);
+              //  playWalk();
             }
         }
         else
@@ -388,6 +412,7 @@ public class AnimationControllerLuke : MonoBehaviour
                 LuckAnimatior.SetBool("Idel", false);
                 LuckAnimatior.SetBool("RunJump", false);
                 LuckAnimatior.SetBool("RunForce", false);
+               // playWalk();
             }
         }
         else
@@ -449,8 +474,7 @@ public class AnimationControllerLuke : MonoBehaviour
             LuckAnimatior.SetBool("Idel", false);
             LuckAnimatior.SetBool("RunJump", false);
             LuckAnimatior.SetBool("RunForce", false);
-        }
-        else
+        }else
         {
             LuckAnimatior.SetBool("Run", false);
             LuckAnimatior.SetBool("Jump", false);
