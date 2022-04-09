@@ -7,10 +7,19 @@ public class AnimationControllerLuke : MonoBehaviour
     public Animator LuckAnimatior;
     public AudioClip LuckWalk;
     public AudioSource sounds;
+    public float camSpeed = 2.5f;
+    public GameObject cameraMain;
+    public  Vector3 cameraPos;  //this is the target position
+    public Vector3 cameraOldPos; //this is the old position or the current 
+    bool down, flag;
+
     // Start is called before the first frame update
     void Start()
     {
         sounds.clip = LuckWalk;
+        flag = false;
+        down = false;
+        
     }
     void playWalk()
     {
@@ -55,6 +64,7 @@ public class AnimationControllerLuke : MonoBehaviour
         else
         if (Input.GetButton("Fire2"))
         {
+            
             if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
             {
                 
@@ -143,6 +153,11 @@ public class AnimationControllerLuke : MonoBehaviour
                 LuckAnimatior.SetBool("RunCrouched", false);
             }
                 
+        }else
+        if (Input.GetButtonUp("Fire2"))
+        {
+            down = false;
+            flag = false;
         }
         else   //&& !(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
         if (Input.GetKey("w"))
