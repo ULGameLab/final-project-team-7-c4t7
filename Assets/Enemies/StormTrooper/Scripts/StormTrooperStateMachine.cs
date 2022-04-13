@@ -314,9 +314,6 @@ public class StormTrooperStateMachine : MonoBehaviour
             if (InRangeToShoot())
                 Transition(State.Shoot);
         }
-        
-            
-
     }
 
     private void OnTriggerStay(Collider other)

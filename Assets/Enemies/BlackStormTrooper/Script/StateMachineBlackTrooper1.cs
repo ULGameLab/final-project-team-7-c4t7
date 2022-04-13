@@ -322,10 +322,6 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
             if (InRangeToShoot())
                 Transition(State.Shoot);
         }
-        else if (!CanSee())
-        {
-            Transition(State.Idle);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
