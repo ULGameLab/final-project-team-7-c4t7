@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
 
     [Header("Sensitivity")]
     [SerializeField] [Range(0f, 10f)] private float LookSensitivity = 3.5f;
-    [SerializeField] [Range(0f, 10f)] private float ScrollSensitivity = 5f;
+    [SerializeField] [Range(0f, 10f)] private float ZoomSensitivity = 5f;
 
     [Header("Rotation")]
     [SerializeField] private float rotationSharpness = 50;
@@ -78,7 +78,7 @@ public class CameraController : MonoBehaviour
         //Handle Inputs
         float mouseX = PlayerInputs.MouseXInput * LookSensitivity;
         float mouseY = PlayerInputs.MouseYInput * LookSensitivity;
-        float zoom = -PlayerInputs.MouseScrollInput * ScrollSensitivity;
+        float zoom = -PlayerInputs.MouseScrollInput * ZoomSensitivity;
 
         if (invertX) { mouseX *= -1f; }
         if (invertY) { mouseY *= -1f; }
