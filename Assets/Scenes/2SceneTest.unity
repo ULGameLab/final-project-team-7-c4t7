@@ -2789,6 +2789,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurState: 0
   walkSpeed: 3.5
+  FireGun: {fileID: 0}
+  IdleGun: {fileID: 0}
   VisRng: 175
   VisDist: 10
   sounds: {fileID: 1028495484}
@@ -2941,7 +2943,7 @@ PrefabInstance:
     - target: {fileID: 4742659712009798174, guid: fea5f67e76e2c2d4a821214292c30bd2, type: 3}
       propertyPath: GroundCheck
       value: 
-      objectReference: {fileID: 65073542}
+      objectReference: {fileID: 544657782}
     - target: {fileID: 4742659712009798174, guid: fea5f67e76e2c2d4a821214292c30bd2, type: 3}
       propertyPath: DashRecharge
       value: 1.5
@@ -3008,6 +3010,11 @@ PrefabInstance:
       objectReference: {fileID: 187928790}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea5f67e76e2c2d4a821214292c30bd2, type: 3}
+--- !u!4 &544657782 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4742659710695587834, guid: fea5f67e76e2c2d4a821214292c30bd2, type: 3}
+  m_PrefabInstance: {fileID: 544657781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &593316154
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,6 +5013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurState: 0
   walkSpeed: 3.5
+  FireGun: {fileID: 0}
+  IdleGun: {fileID: 0}
   VisRng: 175
   VisDist: 25
   sounds: {fileID: 1028495484}
@@ -5562,6 +5571,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurState: 0
   walkSpeed: 3.5
+  FireGun: {fileID: 0}
+  IdleGun: {fileID: 0}
   VisRng: 175
   VisDist: 25
   sounds: {fileID: 0}
