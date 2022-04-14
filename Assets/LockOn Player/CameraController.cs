@@ -40,6 +40,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private LayerMask obstructionLayers = -1;  //-1 sets it for all layers
     private List<Collider> ignoreColliders = new List<Collider>();  //List of colliders to be ignored
 
+    public Vector3 CameraPlanarDirection { get => planarDirection; }
+
     /*
     private Vector3 planarDirection;  //Camera forward on the x, z plane
     private Vector3 targetPosition;  //Where the camera should be
