@@ -206,7 +206,7 @@ public class StormTrooperStateMachine : MonoBehaviour
 
     void Fire()
     {
-        //sounds.PlayOneShot(pew);
+        sounds.PlayOneShot(pew);
         bulletsFired = Instantiate(bulletType, gunTip.position, Quaternion.identity);
 
         bulletsFired.GetComponent<Rigidbody>().mass = .2f;
