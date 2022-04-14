@@ -34,9 +34,7 @@ public class PlayerInputs : MonoBehaviour
         get
         {
             if(Forward.Pressed() && Back.Pressed() ) { return 0; }
-            else if(Forward.Pressed() ) {
-                Debug.Log("Forward");
-                return 1; }
+            else if(Forward.Pressed() ) { return 1; }
             else if(Back.Pressed() ) { return -1; }
             else { return 0; }
         }
