@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 7601e4a47c3b99445a4c077586ea3e1a, type: 2}
 --- !u!1 &63568237
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 63568242}
   - component: {fileID: 63568241}
   - component: {fileID: 63568240}
-  - component: {fileID: 63568239}
   m_Layer: 0
   m_Name: invisWall (4)
   m_TagString: Untagged
@@ -158,22 +157,6 @@ Transform:
   m_Father: {fileID: 543450652468688572}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: -146.676, z: 90}
---- !u!54 &63568239
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63568237}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &63568240
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5197,7 +5180,6 @@ GameObject:
   - component: {fileID: 383812327}
   - component: {fileID: 383812326}
   - component: {fileID: 383812325}
-  - component: {fileID: 383812324}
   m_Layer: 0
   m_Name: invisWall (1)
   m_TagString: Untagged
@@ -5220,22 +5202,6 @@ Transform:
   m_Father: {fileID: 543450652468688572}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 29.679, z: 90}
---- !u!54 &383812324
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383812322}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &383812325
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5395,7 +5361,6 @@ GameObject:
   - component: {fileID: 500265604}
   - component: {fileID: 500265603}
   - component: {fileID: 500265602}
-  - component: {fileID: 500265605}
   m_Layer: 0
   m_Name: Hanger.1
   m_TagString: Untagged
@@ -5493,22 +5458,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500265600}
   m_Mesh: {fileID: 8712281085990082257, guid: 0063eef8b26a17b469d225f8255153a2, type: 3}
---- !u!54 &500265605
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500265600}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &509448075
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,7 +5470,6 @@ GameObject:
   - component: {fileID: 509448079}
   - component: {fileID: 509448078}
   - component: {fileID: 509448077}
-  - component: {fileID: 509448080}
   m_Layer: 0
   m_Name: Hall
   m_TagString: Untagged
@@ -5613,22 +5561,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509448075}
   m_Mesh: {fileID: 6864364205052522755, guid: 0063eef8b26a17b469d225f8255153a2, type: 3}
---- !u!54 &509448080
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509448075}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &555325943
 GameObject:
   m_ObjectHideFlags: 0
@@ -15613,7 +15545,6 @@ GameObject:
   - component: {fileID: 826598267}
   - component: {fileID: 826598266}
   - component: {fileID: 826598265}
-  - component: {fileID: 826598268}
   m_Layer: 0
   m_Name: Hanger.2
   m_TagString: Untagged
@@ -15700,22 +15631,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826598263}
   m_Mesh: {fileID: -8193455734010384467, guid: 0063eef8b26a17b469d225f8255153a2, type: 3}
---- !u!54 &826598268
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826598263}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &885360355
 GameObject:
   m_ObjectHideFlags: 0
@@ -15894,7 +15809,6 @@ GameObject:
   - component: {fileID: 991019288}
   - component: {fileID: 991019287}
   - component: {fileID: 991019286}
-  - component: {fileID: 991019289}
   m_Layer: 0
   m_Name: 3.4 floor
   m_TagString: Untagged
@@ -15981,22 +15895,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991019284}
   m_Mesh: {fileID: -7610794452851049526, guid: 0063eef8b26a17b469d225f8255153a2, type: 3}
---- !u!54 &991019289
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991019284}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1037411072
 GameObject:
   m_ObjectHideFlags: 0
@@ -20998,7 +20896,6 @@ GameObject:
   - component: {fileID: 1521357767}
   - component: {fileID: 1521357766}
   - component: {fileID: 1521357765}
-  - component: {fileID: 1521357764}
   m_Layer: 0
   m_Name: invisWall
   m_TagString: Untagged
@@ -21021,22 +20918,6 @@ Transform:
   m_Father: {fileID: 543450652468688572}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 53.658, z: 90}
---- !u!54 &1521357764
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521357762}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &1521357765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25925,7 +25806,6 @@ GameObject:
   - component: {fileID: 1674559858}
   - component: {fileID: 1674559857}
   - component: {fileID: 1674559856}
-  - component: {fileID: 1674559855}
   m_Layer: 0
   m_Name: invisWall (3)
   m_TagString: Untagged
@@ -25948,22 +25828,6 @@ Transform:
   m_Father: {fileID: 543450652468688572}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -83.512, z: 90}
---- !u!54 &1674559855
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674559853}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &1674559856
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26040,7 +25904,6 @@ GameObject:
   - component: {fileID: 1681152459}
   - component: {fileID: 1681152458}
   - component: {fileID: 1681152457}
-  - component: {fileID: 1681152456}
   m_Layer: 0
   m_Name: invisWall (2)
   m_TagString: Untagged
@@ -26063,22 +25926,6 @@ Transform:
   m_Father: {fileID: 543450652468688572}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -44.547, z: 90}
---- !u!54 &1681152456
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681152454}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &1681152457
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40591,7 +40438,6 @@ GameObject:
   - component: {fileID: 1884294926}
   - component: {fileID: 1884294925}
   - component: {fileID: 1884294924}
-  - component: {fileID: 1884294927}
   m_Layer: 0
   m_Name: 1.1 floor
   m_TagString: Untagged
@@ -40678,22 +40524,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884294922}
   m_Mesh: {fileID: 1992410047735226687, guid: 0063eef8b26a17b469d225f8255153a2, type: 3}
---- !u!54 &1884294927
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884294922}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1886523263
 GameObject:
   m_ObjectHideFlags: 0
@@ -50641,7 +50471,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &284850574278992110
 GameObject:
@@ -50660,7 +50490,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &543450651597635916
 Transform:
@@ -50791,7 +50621,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &919132147944446966
 GameObject:
@@ -50974,7 +50804,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &1711813854609583542
 MeshRenderer:
@@ -51295,7 +51125,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2281305056800223578
 Transform:
@@ -51502,7 +51332,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &3309710192460610915
 GameObject:
@@ -51756,7 +51586,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &4637928319567673765
 MeshRenderer:
@@ -51832,7 +51662,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &4796024950026855244
 MeshFilter:
@@ -52059,7 +51889,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52123,7 +51953,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!54 &5583845067077215169
 Rigidbody:
@@ -52136,7 +51966,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52160,7 +51990,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52182,7 +52012,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &5800596725731560428
 GameObject:
@@ -52246,7 +52076,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52268,7 +52098,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7022283931196325378
 Transform:
@@ -52296,7 +52126,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52335,7 +52165,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52393,7 +52223,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52417,7 +52247,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52441,7 +52271,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52472,7 +52302,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52496,7 +52326,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52527,7 +52357,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52549,7 +52379,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!54 &8897588170100272844
 Rigidbody:
@@ -52562,7 +52392,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52584,7 +52414,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!54 &9064023052410947057
 Rigidbody:
@@ -52597,7 +52427,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -52619,7 +52449,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!54 &9167289870363508751
 Rigidbody:
@@ -52632,7 +52462,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
