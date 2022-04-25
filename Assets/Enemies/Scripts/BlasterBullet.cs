@@ -26,10 +26,16 @@ public class BlasterBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         DMG = (Damage);//scale damage based off of the bullet's speed.
-        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Player")
+        if (collision.collider.tag == "Player")
         {
             HeathBar HB = collision.gameObject.GetComponent<HeathBar>();
             if (HB != null) { HB.TakeDamage(DMG); }
+        }
+
+        if (collision.collider.tag == "Enemy")
+        {
+            EnemyHealthBarScripts HBE = collision.gameObject.GetComponent<EnemyHealthBarScripts>();
+            if (HBE != null) { HBE.TakeDamage(DMG); }
         }
         Destroy(Bullet);
     }

@@ -2965,7 +2965,7 @@ GameObject:
   - component: {fileID: 7824743381264976281}
   - component: {fileID: 7824743381264976283}
   - component: {fileID: 7824743381264976282}
-  - component: {fileID: 6511356331509832978}
+  - component: {fileID: 1311022047248974676}
   m_Layer: 0
   m_Name: stormTrooperPrefab
   m_TagString: Enemy
@@ -3135,7 +3135,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6511356331509832978
+--- !u!114 &1311022047248974676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3144,19 +3144,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7824743381264976274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef1dca59d66c0d40aaadc5792549620, type: 3}
+  m_Script: {fileID: 11500000, guid: b6d9635b55247524f91afd2cc72cec27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxH: 100
-  CurH: 15
-  persisBody: 0
-  isVisbl: 0
-  LoseOnDeath: 0
-  WinOnDeath: 0
-  SelfObj: {fileID: 7824743381264976274}
+  isVisbl: 1
   HBSl: {fileID: 5842177116600587818}
   CanObj: {fileID: 8638588283171977124}
-  FaceT: {fileID: 0}
   HldrT: {fileID: 605902391488053858}
 --- !u!1 &7942121641097977270
 GameObject:
