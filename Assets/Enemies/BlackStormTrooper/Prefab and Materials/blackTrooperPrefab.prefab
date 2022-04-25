@@ -3238,7 +3238,7 @@ GameObject:
   - component: {fileID: 7828601343497510573}
   - component: {fileID: 6698951272805444638}
   - component: {fileID: 7828601343497510574}
-  - component: {fileID: 6716445327567561611}
+  - component: {fileID: 7561283864070132512}
   m_Layer: 0
   m_Name: blackTrooperPrefab
   m_TagString: Enemy
@@ -3414,7 +3414,7 @@ MonoBehaviour:
   sounds: {fileID: 4056653735671026669}
   pew: {fileID: 8300000, guid: dc79c97d8d454ef499136ce69f6c30e0, type: 3}
   theState: {fileID: 0}
---- !u!114 &6716445327567561611
+--- !u!114 &7561283864070132512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3423,19 +3423,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7828601343497510565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef1dca59d66c0d40aaadc5792549620, type: 3}
+  m_Script: {fileID: 11500000, guid: b6d9635b55247524f91afd2cc72cec27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxH: 150
-  CurH: 15
-  persisBody: 0
-  isVisbl: 0
-  LoseOnDeath: 0
-  WinOnDeath: 0
-  SelfObj: {fileID: 7828601343497510565}
+  isVisbl: 1
   HBSl: {fileID: 793332219536982253}
   CanObj: {fileID: 432542954511988603}
-  FaceT: {fileID: 0}
   HldrT: {fileID: 4261186124691922267}
 --- !u!1 &7929643061580499585
 GameObject:
