@@ -6,7 +6,11 @@ public class MainMenuSripts : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("DemoScene");
+        SceneManager.LoadScene("InfoScene");
+    }
+    public void GoToInstruction()
+    {
+        SceneManager.LoadScene("Instructions");
     }
     public void ExitGame()
     {
@@ -14,10 +18,16 @@ public class MainMenuSripts : MonoBehaviour
     }
     public void BackToMainMenu()
     {
+        
         SceneManager.LoadScene("MainMenu");
     }
     public void GoToDemo()
     {
+        
         SceneManager.LoadScene("2SceneTest");
+    }
+    public void GoToInfo()
+    {
+        SceneManager.LoadScene("InfoScene");
     }
 }
