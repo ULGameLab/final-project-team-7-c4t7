@@ -586,7 +586,7 @@ MonoBehaviour:
     primary: 0
     alternate: 0
   LockOn:
-    primary: 0
+    primary: 120
     alternate: 0
   Grab:
     primary: 0

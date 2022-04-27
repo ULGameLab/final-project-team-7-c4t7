@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCharController : MonoBehaviour
 {
     [Header("Movement")]
+    [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float runSpeed = 8f;
     [SerializeField] private float sprintSpeed = 10f;
 
@@ -24,6 +25,11 @@ public class PlayerCharController : MonoBehaviour
     private Vector3 newVelocity;
     private Quaternion newRotation;
 
+    private bool strafing;
+    private bool sprinting;
+    private float strafeParameter;
+    private Vector3 strafeParametersXZ;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,13 +45,25 @@ public class PlayerCharController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveInput = new Vector3(inputs.MoveAxisRight, 0, inputs.MoveAxisForward).normalized;
+        Vector3 moveInput = new Vector3(inputs.MoveAxisRight, 0, inputs.MoveAxisForward);
         Vector3 camPlanarDirection = camControl.CameraPlanarDirection;
         Quaternion camPlanarRotation = Quaternion.LookRotation(camPlanarDirection);
 
-        Debug.DrawLine(transform.position, transform.position + moveInput, Color.green);
-        moveInput = camPlanarRotation * moveInput;
-        Debug.DrawLine(transform.position, transform.position + moveInput, Color.magenta);
+        // Debug.DrawLine(transform.position, transform.position + moveInput, Color.green);  //Consider re-enable
+        Vector3 moveInputOriented = camPlanarRotation * moveInput.normalized;
+        // Debug.DrawLine(transform.position, transform.position + moveInput, Color.magenta);  //Consider re-enable
+
+        if (strafing)
+        {
+            sprinting = inputs.Sprint.PressedDown() && (moveInput != Vector3.zero);
+            strafing = inputs.LockOn.Pressed() && !sprinting;
+        }
+        else
+        {
+            sprinting = inputs.Sprint.Pressed() && (moveInput != Vector3.zero);
+            strafing = inputs.LockOn.PressedDown();
+        }
+
         /*
         targetSpeed = moveInput != Vector3.zero ? runSpeed : 0;
 
@@ -59,25 +77,45 @@ public class PlayerCharController : MonoBehaviour
         } */
 
         //Movement speed
-        if (inputs.Sprint.Pressed() ) { targetSpeed = moveInput != Vector3.zero ? sprintSpeed : 0; }
+        if (sprinting ) { targetSpeed = moveInput != Vector3.zero ? sprintSpeed : 0; }
+        else if (strafing) { targetSpeed = moveInput != Vector3.zero ? walkSpeed : 0; }
         else { targetSpeed = moveInput != Vector3.zero ? runSpeed : 0; }
         newSpeed = Mathf.Lerp(newSpeed, targetSpeed, Time.deltaTime * moveSharpness);
 
         //Velocity
-        newVelocity = moveInput * newSpeed;
+        newVelocity = moveInputOriented * newSpeed;
         transform.Translate(newVelocity * Time.deltaTime, Space.World);
 
         //Rotation
-        if(targetSpeed != 0)
+        if (strafing)
         {
-            targetRotation = Quaternion.LookRotation(moveInput);
+            targetRotation = Quaternion.LookRotation(camPlanarDirection);
+            newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSharpness);
+            transform.rotation = newRotation;
+        }
+        else if(targetSpeed != 0)
+        {
+            targetRotation = Quaternion.LookRotation(moveInputOriented);
             newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSharpness);
             transform.rotation = newRotation;
         }
 
 
         //Animation
-        animator.SetFloat("Forward", newSpeed);
+        if (strafing)
+        {
+            strafeParameter = Mathf.Clamp01(strafeParameter + Time.deltaTime * 4);
+            strafeParametersXZ = Vector3.Lerp(strafeParametersXZ, moveInput * newSpeed, moveSharpness * Time.deltaTime);
+        }
+        else
+        {
+            strafeParameter = Mathf.Clamp01(strafeParameter - Time.deltaTime * 4);
+            strafeParametersXZ = Vector3.Lerp(strafeParametersXZ, Vector3.forward * newSpeed, moveSharpness * Time.deltaTime);
+        }
+        //animator.SetFloat("Forward", newSpeed);
+        animator.SetFloat("Strafing", strafeParameter);
+        animator.SetFloat("StrafingX", Mathf.Round(strafeParametersXZ.x * 100f) / 100f);
+        animator.SetFloat("StrafingZ", Mathf.Round(strafeParametersXZ.z * 100f) / 100f);
 
     }
 }
