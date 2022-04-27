@@ -34,14 +34,14 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         // Sprint and Crouch Icons
-        if (Input.GetKey(KeyCode.C))
+        if (UnityEngine.Input.GetKey(KeyCode.C))
         {
             Crouch_Icon.SetActive(true);
             Sprint_Icon.SetActive(false);
         }
         else
         {
-            if (MoveRef.GetOnGround() && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.C))
+            if (MoveRef.GetOnGround() && UnityEngine.Input.GetKey(KeyCode.LeftShift) && !UnityEngine.Input.GetKey(KeyCode.C))
             {
                 Crouch_Icon.SetActive(false);
                 Sprint_Icon.SetActive(true);
@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
         }
 
         // Repulsor Bar
-        if (InputRef.GetRepulsorReady() && Input.GetButtonDown("Fire2"))
+        if (InputRef.GetRepulsorReady() && UnityEngine.Input.GetButtonDown("Fire2"))
         {
             StartCoroutine(Repulsor());
         }

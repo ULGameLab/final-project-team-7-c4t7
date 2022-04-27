@@ -24,7 +24,7 @@ public class LightsaberController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (AttackReady && Input.GetButtonDown("Fire1"))
+        if (AttackReady && UnityEngine.Input.GetButtonDown("Fire1"))
         {
             sounds.PlayOneShot(swish);
             StartCoroutine(Attack());
@@ -37,14 +37,14 @@ public class LightsaberController : MonoBehaviour
             StartCoroutine(DeflectReadying());
         }
         */
-        if (DeflectReady && Input.GetButtonDown("Fire2"))
+        if (DeflectReady && UnityEngine.Input.GetButtonDown("Fire2"))
         {
             //DeflectReady = false;
             BaseLightsaber.SetActive(false);
             DeflectZone.SetActive(true);
             AttackReady = false;
         }
-        if (Input.GetButtonUp("Fire2"))
+        if (UnityEngine.Input.GetButtonUp("Fire2"))
         {
             DeflectZone.SetActive(false);
            // BaseLightsaber.SetActive(true);

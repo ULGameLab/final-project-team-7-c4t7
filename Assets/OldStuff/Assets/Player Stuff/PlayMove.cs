@@ -48,8 +48,8 @@ public class PlayMove : MonoBehaviour
             velocity.y = -1; //To ensure velocity is not set to 0 a few seconds before ground contact is made with the actually player model.
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = UnityEngine.Input.GetAxis("Horizontal");
+        float z = UnityEngine.Input.GetAxis("Vertical");
 
         movement = transform.right * x + transform.forward * z;
         /*
@@ -76,7 +76,7 @@ public class PlayMove : MonoBehaviour
         */
 
         //Dash
-        if (DashReady && Input.GetKey(KeyCode.LeftShift) && status.getForce() >= forceReduction)
+        if (DashReady && UnityEngine.Input.GetKey(KeyCode.LeftShift) && status.getForce() >= forceReduction)
         {
             status.AddForce(-forceReduction);
             StartCoroutine(Dash());
@@ -98,7 +98,7 @@ public class PlayMove : MonoBehaviour
         //Executing movement
         //Vector3 movement = transform.right * x + transform.forward * z;
         controller.Move(movement /*movement.normalized*/ * speed * Time.deltaTime);
-        if(Input.GetButtonDown("Jump") && onGround) { velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); }
+        if(UnityEngine.Input.GetButtonDown("Jump") && onGround) { velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
