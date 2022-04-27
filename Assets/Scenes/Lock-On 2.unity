@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &57857873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57857874}
+  m_Layer: 0
+  m_Name: TestTargetTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57857874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57857873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 598788041}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277442031
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +295,7 @@ GameObject:
   - component: {fileID: 598788040}
   - component: {fileID: 598788039}
   - component: {fileID: 598788038}
+  - component: {fileID: 598788042}
   m_Layer: 0
   m_Name: Test Target
   m_TagString: Untagged
@@ -346,10 +378,25 @@ Transform:
   m_LocalPosition: {x: 3.0115762, y: 0.96, z: -23.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 57857874}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598788042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598788037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4a9476f0f9d34469ae89cc55d23f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetable: 1
+  targetTransform: {fileID: 57857874}
 --- !u!1 &607422938
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +562,12 @@ MonoBehaviour:
   obstructionLayers:
     serializedVersion: 2
     m_Bits: 119
+  LockOnLossTime: 15
+  LockOnDistance: 15
+  lockOnLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   lockedOn: 0
-  target: {fileID: 0}
 --- !u!114 &1099900113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,9 +777,13 @@ MonoBehaviour:
   checkRadius: 0.2
   obstructionLayers:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 86
+  LockOnLossTime: 15
+  LockOnDistance: 15
+  lockOnLayers:
+    serializedVersion: 2
+    m_Bits: 1
   lockedOn: 0
-  target: {fileID: 598788041}
 --- !u!4 &1198582726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d52fa83137619b64ca8f21df12ed674d, type: 3}

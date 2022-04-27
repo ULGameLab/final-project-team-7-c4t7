@@ -42,8 +42,10 @@ public class CameraController : MonoBehaviour
     private List<Collider> ignoreColliders = new List<Collider>();  //List of colliders to be ignored
 
     [Header("Lock-On")]
+    [SerializeField] private float LockOnLossTime = 15;
     [SerializeField] private float LockOnDistance = 15;  //Max distance a potential target can be
     [SerializeField] private LayerMask lockOnLayers = -1;
+    private float LockOnLossTimeCurrent;
 
     [SerializeField] private bool lockedOn;
     //[SerializeField] Transform target;
@@ -149,6 +151,18 @@ public class CameraController : MonoBehaviour
         //camera.transform.rotation = Quaternion.LookRotation(target.position - camera.transform.position, Vector3.up);
         camera.transform.position = newPosition;
 
+        //Lock-On loss time
+        if (lockedOn && target != null)
+        {
+            bool valid = target.Targetable && InDistance(target) && InScreen(target) && NotBlocked(target);
+
+            if(valid) { LockOnLossTimeCurrent = 0; }
+            else { LockOnLossTimeCurrent = Mathf.Clamp(LockOnLossTimeCurrent + Time.deltaTime, 0, LockOnLossTime); }
+
+            if (LockOnLossTimeCurrent == LockOnLossTime)
+                lockedOn = false;
+        }
+
     }
     public void ToggleLockOn(bool Toggle)
     {
@@ -203,7 +217,8 @@ public class CameraController : MonoBehaviour
 
     private bool InScreen(Targetable targetable)
     {
-        Vector3 viewPortPosition = camera.WorldToViewportPoint(target.TargetTransform.position);
+        // Vector3 viewPortPosition = camera.WorldToViewportPoint(target.TargetTransform.position);  //Changed to fix null reference exception problem when trying to toggle lock-on
+        Vector3 viewPortPosition = camera.WorldToViewportPoint(targetable.TargetTransform.position);
 
         if ( !(viewPortPosition.x > 0) || !(viewPortPosition.x < 1) ) { return false; }
         if ( !(viewPortPosition.y > 0) || !(viewPortPosition.y < 1) ) { return false; }
