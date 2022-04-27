@@ -677,25 +677,25 @@ MonoBehaviour:
     primary: 32
     alternate: 0
   Dash:
-    primary: 0
+    primary: 9
     alternate: 0
   Attack:
-    primary: 0
+    primary: 323
     alternate: 0
   Block:
-    primary: 0
+    primary: 324
     alternate: 0
   LockOn:
-    primary: 120
+    primary: 308
     alternate: 0
   Grab:
-    primary: 0
+    primary: 301
     alternate: 0
   Push:
-    primary: 0
+    primary: 101
     alternate: 0
   Pull:
-    primary: 0
+    primary: 113
     alternate: 0
 --- !u!114 &1198582725
 MonoBehaviour:
