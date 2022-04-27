@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [Header("Framing")]
+    [Header("Framing & FOV")]
     [SerializeField] private Camera camera = null;
     [SerializeField] private Transform followTransform = null;
     //[SerializeField] private Vector3 Framing = new Vector3(0, 0, 0);  //Used as offset from follow transform
-    [SerializeField] private Vector3 Framing = Vector3.zero;  //Used as offset from follow transform
+    //[SerializeField] private Vector3 Framing = Vector3.zero;  //Used as offset from follow transform
+    [SerializeField] private Vector3 FramingNormal = Vector3.zero;  //Used as offset from follow transform
+    [SerializeField] private Vector3 LockOnFraming = Vector3.zero;
+    [SerializeField, Range(1, 179)] private float LockOnFOV = 40;
     private Vector3 planarDirection;  //Camera forward on the x, z plane
+    private float FOVnormal;
+    private float framingLerp;
 
     [Header("Sensitivity")]
     [SerializeField] [Range(0f, 10f)] private float LookSensitivity = 3.5f;
@@ -54,6 +59,13 @@ public class CameraController : MonoBehaviour
     //public Transform Target { get => target; }
     public Targetable Target { get => target; }
 
+    /*
+    [SerializeField] private Vector3 LockOnFraming = Vector3.zero;
+    [SerializeField, Range(1, 179)] private float LockOnFOV = 40;
+    private float FOVnormal;
+    private float framingLerp;
+    */
+
     public Vector3 CameraPlanarDirection { get => planarDirection; }
 
     /*
@@ -75,6 +87,7 @@ public class CameraController : MonoBehaviour
     {
         ignoreColliders.AddRange(GetComponentsInChildren<Collider>());  //Adds all of Player's colliders to ignore list
 
+        FOVnormal = camera.fieldOfView;
         planarDirection = followTransform.forward;
 
         //Targets
@@ -99,8 +112,13 @@ public class CameraController : MonoBehaviour
         if (invertX) { mouseX *= -1f; }
         if (invertY) { mouseY *= -1f; }
 
+        //Framing & FOV
+        Vector3 framing = Vector3.Lerp(FramingNormal, LockOnFraming, framingLerp);
         //Vector3 focusPosition = followTransform.position + camera.transform.TransformDirection(Framing);
-        Vector3 focusPosition = followTransform.position + followTransform.TransformDirection(Framing);
+        //Vector3 focusPosition = followTransform.position + followTransform.TransformDirection(FramingNormal);  //Changed for lockon framing stuff
+        Vector3 focusPosition = followTransform.position + followTransform.TransformDirection(framing);
+        float FOV = Mathf.Lerp(FOVnormal,LockOnFOV, framingLerp);
+        camera.fieldOfView = FOV;
 
         //Handle Lock-On
         if (lockedOn && target != null)
@@ -109,12 +127,14 @@ public class CameraController : MonoBehaviour
             Vector3 planarCamToTarget = Vector3.ProjectOnPlane(CamToTarget, Vector3.up);
             Quaternion LookRotation = Quaternion.LookRotation(CamToTarget, Vector3.up);
 
+            framingLerp = Mathf.Clamp01(framingLerp + Time.deltaTime * 4);  //Takes 1/4 second to fully transition
             planarDirection = planarCamToTarget != Vector3.zero ? planarCamToTarget.normalized : planarDirection;
             targetVerticalAngle = Mathf.Clamp(LookRotation.eulerAngles.x, minVerticalAngle, maxVerticalAngle);
             targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);
         }
         else
         {
+            framingLerp = Mathf.Clamp01(framingLerp - Time.deltaTime * 4);  //Takes 1/4 second to fully transition
             planarDirection = Quaternion.Euler(0, mouseX, 0) * planarDirection;
             targetVerticalAngle = Mathf.Clamp(targetVerticalAngle + mouseY, minVerticalAngle, maxVerticalAngle);
             targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);

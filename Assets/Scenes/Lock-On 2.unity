@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57857873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.66, z: 0}
+  m_LocalPosition: {x: 0, y: 0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -546,7 +546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1399029871}
   followTransform: {fileID: 1099900111}
-  Framing: {x: 0, y: 0, z: 0}
+  FramingNormal: {x: 0, y: 0, z: 0}
+  LockOnFraming: {x: 0, y: 0, z: 0}
+  LockOnFOV: 40
   LookSensitivity: 3.5
   ZoomSensitivity: 5
   rotationSharpness: 50
@@ -762,7 +764,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1399029871}
   followTransform: {fileID: 277442032}
-  Framing: {x: 1, y: 0.5, z: 0}
+  FramingNormal: {x: 1, y: 0.5, z: 0}
+  LockOnFraming: {x: 0.4, y: 0.4, z: 0}
+  LockOnFOV: 40
   LookSensitivity: 4.5
   ZoomSensitivity: 5
   rotationSharpness: 50
