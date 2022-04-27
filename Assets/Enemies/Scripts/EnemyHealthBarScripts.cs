@@ -66,6 +66,7 @@ public class EnemyHealthBarScripts : MonoBehaviour
 
         if (CurH <= 0)
         {
+            Destroy(this.gameObject);
             
             Destroy(this.GetComponent<EnemyHealthBarScripts>());
             Destroy(CanObj);
