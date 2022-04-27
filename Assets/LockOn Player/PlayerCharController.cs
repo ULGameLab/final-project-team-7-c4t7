@@ -53,6 +53,18 @@ public class PlayerCharController : MonoBehaviour
         Vector3 moveInputOriented = camPlanarRotation * moveInput.normalized;
         // Debug.DrawLine(transform.position, transform.position + moveInput, Color.magenta);  //Consider re-enable
 
+        strafing = camControl.LockedOn;
+        if (strafing)
+        {
+            sprinting = inputs.Sprint.PressedDown() && (moveInput != Vector3.zero);
+        }
+        else
+        {
+            sprinting = inputs.Sprint.Pressed() && (moveInput != Vector3.zero);
+        }
+        if (sprinting)
+            camControl.ToggleLockOn(false);
+        /*
         if (strafing)
         {
             sprinting = inputs.Sprint.PressedDown() && (moveInput != Vector3.zero);
@@ -63,6 +75,7 @@ public class PlayerCharController : MonoBehaviour
             sprinting = inputs.Sprint.Pressed() && (moveInput != Vector3.zero);
             strafing = inputs.LockOn.PressedDown();
         }
+        */
 
         /*
         targetSpeed = moveInput != Vector3.zero ? runSpeed : 0;
@@ -89,7 +102,11 @@ public class PlayerCharController : MonoBehaviour
         //Rotation
         if (strafing)
         {
-            targetRotation = Quaternion.LookRotation(camPlanarDirection);
+            Vector3 toTarget = camControl.Target.position - transform.position;
+            Vector3 planarToTarget = Vector3.ProjectOnPlane(toTarget, Vector3.up);
+
+            //targetRotation = Quaternion.LookRotation(camPlanarDirection);
+            targetRotation = Quaternion.LookRotation(planarToTarget);
             newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSharpness);
             transform.rotation = newRotation;
         }
