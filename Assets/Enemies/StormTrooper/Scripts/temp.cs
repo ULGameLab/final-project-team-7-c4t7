@@ -19,7 +19,7 @@ public class temp : MonoBehaviour
     {
         
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Q))
         {
             
             anim.SetBool("isIdle", true);
@@ -27,7 +27,7 @@ public class temp : MonoBehaviour
             anim.SetBool("isRunning", false);
             anim.SetBool("isShooting", false);
         }
-        if (Input.GetKeyDown(KeyCode.T))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.T))
         {
             
             anim.SetBool("isIdle", false);
@@ -35,7 +35,7 @@ public class temp : MonoBehaviour
             anim.SetBool("isRunning", false);
             anim.SetBool("isShooting", false);
         }
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Y))
         {
             
             anim.SetBool("isIdle", false);
@@ -43,7 +43,7 @@ public class temp : MonoBehaviour
             anim.SetBool("isRunning", true);
             anim.SetBool("isShooting", false);
         }
-        if (Input.GetKeyDown(KeyCode.U))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.U))
         {
             anim.SetBool("isIdle", false);
             anim.SetBool("isWalking", false);
