@@ -280,24 +280,6 @@ public class BlackTrooperStateMachine : MonoBehaviour
         }
 
     }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "PatrolTarget")
-        {
-            PatrolTarget = other.transform;
-            tempTarget = PatrolTarget.GetChild(0);
-            onPatrol = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "PatrolTarget")
-        {
-            onPatrol = false;
-        }
-    }
     //Punch State
     void entPu()
     {
@@ -309,10 +291,31 @@ public class BlackTrooperStateMachine : MonoBehaviour
     }
     void excPu()
     {
-        
+
         if (Mathf.Abs((Plyr.position - transform.position).magnitude) > punchDistance)
         {
             Transition(State.KillLuke);
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "PatrolTarget")
+        {
+            PatrolTarget = other.transform;
+            tempTarget = PatrolTarget.GetChild(0);
+            onPatrol = true; 
+        }
+        else
+            onPatrol = false;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "PatrolTarget")
+        {
+            onPatrol = false;
+        }
+    }
+    
 }

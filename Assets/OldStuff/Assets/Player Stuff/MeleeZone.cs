@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MeleeZone : MonoBehaviour
 {
+    //Sounds
+    public AudioSource sounds;
+    public AudioClip slash;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +36,8 @@ public class MeleeZone : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss")
         {
-            HeathBar HB = other.gameObject.GetComponent<HeathBar>();
+            sounds.PlayOneShot(slash);
+            EnemyHealthBarScripts HB = other.gameObject.GetComponent<EnemyHealthBarScripts>();
             if (HB != null) { HB.TakeDamage(25f); }
         }
         
