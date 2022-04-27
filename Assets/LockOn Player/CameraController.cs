@@ -42,10 +42,15 @@ public class CameraController : MonoBehaviour
     private List<Collider> ignoreColliders = new List<Collider>();  //List of colliders to be ignored
 
     [Header("Lock-On")]
+    [SerializeField] private float LockOnDistance = 15;  //Max distance a potential target can be
+    [SerializeField] private LayerMask lockOnLayers = -1;
+
     [SerializeField] private bool lockedOn;
-    [SerializeField] Transform target;
+    //[SerializeField] Transform target;
+    private Targetable target;
     public bool LockedOn { get => lockedOn; }
-    public Transform Target { get => target; }
+    //public Transform Target { get => target; }
+    public Targetable Target { get => target; }
 
     public Vector3 CameraPlanarDirection { get => planarDirection; }
 
@@ -98,7 +103,7 @@ public class CameraController : MonoBehaviour
         //Handle Lock-On
         if (lockedOn && target != null)
         {
-            Vector3 CamToTarget = target.transform.position - camera.transform.position;
+            Vector3 CamToTarget = target.TargetTransform.position - camera.transform.position;
             Vector3 planarCamToTarget = Vector3.ProjectOnPlane(CamToTarget, Vector3.up);
             Quaternion LookRotation = Quaternion.LookRotation(CamToTarget, Vector3.up);
 
@@ -153,6 +158,84 @@ public class CameraController : MonoBehaviour
 
         //Toggle
         lockedOn = !lockedOn;
+
+        //Find target for lock on
+        if(lockedOn)
+        {
+            //Filter targetables
+            List<Targetable> targetables = new List<Targetable>();
+            Collider[] colliders = Physics.OverlapSphere(transform.position, LockOnDistance, lockOnLayers);
+            foreach (Collider collider in colliders)
+            {
+                Targetable targetable = collider.GetComponent<Targetable>();
+                if (targetable != null)
+                    if (targetable.Targetable)
+                        if (InScreen(targetable))
+                            if (NotBlocked(targetable))
+                                targetables.Add(targetable);
+            }
+            //Find closest targetable to center of screen
+            float hypotenuse;
+            float smallestHypotenuse = Mathf.Infinity;
+            Targetable closestTargetable = null;
+
+            foreach(Targetable targetable in targetables)
+            {
+                hypotenuse = CalculateHypotenuse(targetable.TargetTransform.position);
+                if (smallestHypotenuse > hypotenuse)
+                {
+                    closestTargetable = targetable;
+                    smallestHypotenuse = hypotenuse;
+                }
+            }
+            //Final
+            target = closestTargetable;
+            lockedOn = closestTargetable != null;
+        }
+
+    }
+
+    private bool InDistance(Targetable targetable)
+    {
+        float distance = Vector3.Distance(transform.position, targetable.TargetTransform.position);
+        return distance <= LockOnDistance;
+    }
+
+    private bool InScreen(Targetable targetable)
+    {
+        Vector3 viewPortPosition = camera.WorldToViewportPoint(target.TargetTransform.position);
+
+        if ( !(viewPortPosition.x > 0) || !(viewPortPosition.x < 1) ) { return false; }
+        if ( !(viewPortPosition.y > 0) || !(viewPortPosition.y < 1) ) { return false; }
+        if ( !(viewPortPosition.z > 0) ) { return false; }
+
+        return true;
+    }
+
+    private bool NotBlocked(Targetable targetable)
+    {
+        Vector3 origin = camera.transform.position;
+        Vector3 direction = targetable.TargetTransform.position - origin;
+
+        float radius = 0.15f;
+        float distance = direction.magnitude;
+
+        bool notBlocked = !Physics.SphereCast(origin, radius, direction, out RaycastHit hit, distance, obstructionLayers);
+
+        return notBlocked;
+    }
+
+    private float CalculateHypotenuse(Vector3 position)
+    {
+        float screenCenterX = camera.pixelWidth / 2;
+        float screenCenterY = camera.pixelHeight / 2;
+
+        Vector3 screenPosition = camera.WorldToScreenPoint(position);
+        float xDelta = screenCenterX - screenPosition.x;
+        float yDelta = screenCenterY - screenPosition.y;
+        float hypotenuse = Mathf.Sqrt(Mathf.Pow(xDelta, 2) + Mathf.Pow(yDelta, 2));
+
+        return hypotenuse;
     }
 
 }

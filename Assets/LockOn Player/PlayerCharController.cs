@@ -102,7 +102,7 @@ public class PlayerCharController : MonoBehaviour
         //Rotation
         if (strafing)
         {
-            Vector3 toTarget = camControl.Target.position - transform.position;
+            Vector3 toTarget = camControl.Target.TargetTransform.position - transform.position;
             Vector3 planarToTarget = Vector3.ProjectOnPlane(toTarget, Vector3.up);
 
             //targetRotation = Quaternion.LookRotation(camPlanarDirection);

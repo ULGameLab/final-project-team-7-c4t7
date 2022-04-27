@@ -5,10 +5,8 @@ using UnityEngine;
 //public class Targetable : MonoBehaviour
 public interface Targetable
 {
-    //Determines if object is targetable.
-    public bool Targetable { get; }
-    //What the camera will be tracking when object is targeted
-    public Transform TargetTransform { get; }
+    public bool Targetable { get; }  //Determines if object is targetable.
+    public Transform TargetTransform { get; }  //What the camera will be tracking when object is targeted
 
     /*
     // Start is called before the first frame update
