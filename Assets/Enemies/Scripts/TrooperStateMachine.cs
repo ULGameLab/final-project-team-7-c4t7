@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class TrooperStateMachine : MonoBehaviour
 {
 
-    public enum State { Idle,toIdle, KillLuke, Strafe, Patrol}
+    public enum State { Idle, KillLuke ,Patrol}
     public State CurState;
     private Transform Plyr;
     private UnityEngine.AI.NavMeshAgent AI;
@@ -19,11 +19,8 @@ public class TrooperStateMachine : MonoBehaviour
     private Dictionary<State, System.Action> execute;
 
     [Tooltip("default speed for navmeshes is 3.5")]
-    private float SPD;
-    public float walkSpeed = 3.5f;
-    //GunTransform Variables
-    public Transform FireGun;
-    public Transform IdleGun;
+    public float SPD;
+
     //Idle variables
     bool isIdle;
     Vector3 IPos;
@@ -41,8 +38,6 @@ public class TrooperStateMachine : MonoBehaviour
     public Transform GunTipT;
     private float fireGun;
     public float whenToFire = 10000;
-    private Animator animation;
-    public float walkWhileShootingSpd = .5f;
     //GameObject SelectedPre;
     GameObject Fired;
     public GameObject BulletType;
@@ -66,9 +61,7 @@ public class TrooperStateMachine : MonoBehaviour
     private Transform pTarget;
     private Transform tempTarget;
 
-    //Strafe Variables
-    private float timeToMove = 5;
-    public float strafeSpeed = 5;
+    
     
 
 
@@ -78,38 +71,29 @@ public class TrooperStateMachine : MonoBehaviour
         Plyr = GameObject.FindGameObjectWithTag("Player").transform;
         AI = GetComponent<UnityEngine.AI.NavMeshAgent>();
         patrolTime = idleTime;
-        animation = this.GetComponent<Animator>();
-        
 
         
         isIdle = true;
         IPos = transform.position;
         IRot = transform.forward;
-        
 
         enter = new Dictionary<State, System.Action>()
         {
             {State.Idle, entI },
-            {State.toIdle, enttI },
             {State.KillLuke, entK },
-            {State.Strafe, entS },
             {State.Patrol,entP }
         };
         exit = new Dictionary<State, System.Action>()
         {
             {State.Idle, extI },
-            {State.toIdle, exttI },
             {State.KillLuke, extK },
-            {State.Strafe, extS },
             {State.Patrol,extP }
 
         };
         execute = new Dictionary<State, System.Action>()
         {
             {State.Idle, excI },
-            {State.toIdle, exctI },
             {State.KillLuke, excK },
-            {State.Strafe, excS },
             {State.Patrol,excP }
 
         };
@@ -155,18 +139,11 @@ public class TrooperStateMachine : MonoBehaviour
     //Idle: q
     void entI()
     {
-        resetAnimation();
         patrolTime = idleTime;
-        IdleGun.gameObject.SetActive(true);
-        FireGun.gameObject.SetActive(false);
-        
-        
-        
     }
     void extI()
     {
         isIdle = false;
-        resetAnimation();
     }
     void excI()
     {
@@ -177,23 +154,20 @@ public class TrooperStateMachine : MonoBehaviour
         //if not there, return to idle possition, then stop checking the if statments
         if (!isIdle)
         {
-            if (transform.position != IPos) {
-                Transition(State.toIdle);
-            }
+            if (transform.position != IPos) { AI.destination = IPos; }
             else
             {
                 transform.rotation = Quaternion.LookRotation(IRot);
                 isIdle = true;
             }
         }
-        
         //Debug.Log(willPatrol + "  " + " " + patrolTime + " " + " " +onPatrol);
-        if (willPatrol  && onPatrol)
+        if (willPatrol && patrolTime <0 && onPatrol)
         {
             Transition(State.Patrol);
         }
-        
 
+        //Debug.Log("execute Idle")
         if (InRange() && CanSee()/*Input.GetKey(KeyCode.W)*/)//change to can see luke later
         {
             Transition(State.KillLuke);
@@ -204,45 +178,15 @@ public class TrooperStateMachine : MonoBehaviour
     {
         patrolTime -= 1 * Time.deltaTime;
     }
-    //toIdle 
 
-    void enttI()
-    {
-        animation.SetBool("isWalk", true);
-        patrolTime = 0;
-    }
-    void exttI()
-    {
-        resetAnimation();
-    }
-    void exctI()
-    {
-        AI.destination = IPos;
-        if ((transform.position - IPos).magnitude < 2)
-        {
-            Transition(State.Idle);
-        }
-        
-
-        //Debug.Log("execute Idle")
-        if (InRange() && CanSee()/*Input.GetKey(KeyCode.W)*/)//change to can see luke later
-        {
-            Transition(State.KillLuke);
-        }
-
-    }
     //KillLuke: w
     void entK()
     {
         KillOnce = true;
-        SPD = walkWhileShootingSpd;
-        animation.SetBool("isFire", true);
-        IdleGun.gameObject.SetActive(false);
-        FireGun.gameObject.SetActive(true);
     }
     void extK()
     {
-        resetAnimation();
+        StopCoroutine("Strafe");
     }
     void excK()
     {
@@ -252,7 +196,7 @@ public class TrooperStateMachine : MonoBehaviour
         //circle luke
         if (KillOnce)
         {
-            
+            InvokeRepeating("Strafe", 0f, 8f);//Roberto changed this seens to work kind of better with A high repetitiong
             KillOnce = false;
         }
 
@@ -266,34 +210,28 @@ public class TrooperStateMachine : MonoBehaviour
         if (fireGun > whenToFire)
         {
             Fire();
-            timeToMove--;
             if (Random.Range(0, 3) == 0)
                 fireGun = fireGun - (whenToFire /10);
             else
                 fireGun = fireGun - whenToFire;
-
-        }
-
-        if (timeToMove < 1)
-        {
-            Transition(State.Strafe);
-        }
-
+        } 
         //transitions
         //Debug.Log("execute KillLuke");
         if (!CanSee()/*Input.GetKey(KeyCode.Q)*/)//replace with luke being out of signt
         {
-            if (onPatrol)
-            {
-                Transition(State.Patrol);
-            }
+            if (onPatrol) { Transition(State.Patrol); }
             else
-            {
                 Transition(State.Idle);
-            }
         }
     }
-    
+    void Strafe()
+    {
+        Vector2 tempv2 = Random.insideUnitCircle;
+        KPos = (Plyr.transform.position + (Random.RandomRange(7, 13) * Plyr.transform.forward) + (Random.Range(6, 12) * new Vector3(tempv2.x, 0f, tempv2.y)));//Roberto changed this It add a bit more randoness to the behavior
+        AI.destination = KPos;
+        transform.LookAt(KPos);
+
+    }
     
     void Fire()
     {
@@ -310,49 +248,16 @@ public class TrooperStateMachine : MonoBehaviour
         
         Fired.GetComponent<Rigidbody>().AddForce(bulletDirection * 1f, ForceMode.Impulse);
     }
-    //Strafe
-
-    void entS()
-    {
-    
-        animation.SetBool("isRun", true);
-        SPD = strafeSpeed;
-        Vector2 tempv2 = Random.insideUnitCircle;
-        KPos = (Plyr.transform.position + (Random.RandomRange(7, 13) * Plyr.transform.forward) + (Random.Range(6, 12) * new Vector3(tempv2.x, 0f, tempv2.y)));//Roberto changed this It add a bit more randoness to the behavior
-        AI.destination = KPos;
-        
-    }
-    void extS()
-    {
-        resetAnimation();
-        timeToMove = Random.Range(2, 5);
-    }
-    void excS()
-    {
-        transform.LookAt(KPos);
-        if (InRange() && CanSee()/*Input.GetKey(KeyCode.W)*/)//change to can see luke later
-        {
-            Transition(State.KillLuke);
-        }
-        if (!CanSee()/*Input.GetKey(KeyCode.Q)*/)//replace with luke being out of signt
-        {
-            Transition(State.Idle);
-        }
-    }
-
 
     //Patrol
     void entP()
     {
-        SPD = walkSpeed;
         pTarget1 = PatrolTarget.GetChild(0);
         pTarget2 = PatrolTarget.GetChild(1);
         pTarget = tempTarget;
-        animation.SetBool("isWalk", true);
     }
     void extP()
     {
-        resetAnimation();
         tempTarget = pTarget;
     }
     void excP()
@@ -377,7 +282,6 @@ public class TrooperStateMachine : MonoBehaviour
 
     }
     
-    
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "PatrolTarget")
@@ -385,7 +289,6 @@ public class TrooperStateMachine : MonoBehaviour
             PatrolTarget = other.transform;
             tempTarget = PatrolTarget.GetChild(0);
             onPatrol = true;
-
         }
     }
 
@@ -395,12 +298,6 @@ public class TrooperStateMachine : MonoBehaviour
         {
             onPatrol = false;
         }
-    }
-    void resetAnimation()
-    {
-        animation.SetBool("isRun", false);
-        animation.SetBool("isFire", false);
-        animation.SetBool("isWalk", false);
     }
 
     

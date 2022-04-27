@@ -63,7 +63,6 @@ public class HeathBar : MonoBehaviour
 
     void Start()
     {
-
         CurH = Mathf.Max(Mathf.Min(CurH, MaxH), 0);//this ensures that CurH is betwen 0 and MaxH
         CanObj.SetActive(false);
         InvokeRepeating("HealthRegen", 0.0f, 0.25f);
@@ -89,6 +88,7 @@ public class HeathBar : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         CurH -= dmg;
+
         if (CurH > MaxH) { CurH = MaxH; }//healing will inevitibly come up, and healing is just -damage. don't want to allow over healing (for now, may be something i try out later)
         if (CurH < 0) { CurH = 0; }      //this ensures that if you damage an enemy past the amount of health it has left, the healthbar dosen't fill backwards
         HBSl.value = CurH / MaxH;            //this moves the slider based off a percentage of the remaining health out of the max health
