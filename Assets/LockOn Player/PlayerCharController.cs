@@ -136,7 +136,7 @@ public class PlayerCharController : MonoBehaviour
 
         //Request Lock-On
         if (inputs.LockOn.PressedDown())
-            camControl.ToggleLockOn(camControl.LockedOn);
+            camControl.ToggleLockOn(!camControl.LockedOn);
 
     }
 }
