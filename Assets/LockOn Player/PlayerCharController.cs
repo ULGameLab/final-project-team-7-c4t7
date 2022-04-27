@@ -7,6 +7,7 @@ public class PlayerCharController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float runSpeed = 8f;
+    [SerializeField] private float dashSpeed = 16f;
     [SerializeField] private float sprintSpeed = 10f;
 
     [Header("Sharpness")]
