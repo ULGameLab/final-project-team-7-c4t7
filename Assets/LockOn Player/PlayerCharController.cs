@@ -117,5 +117,9 @@ public class PlayerCharController : MonoBehaviour
         animator.SetFloat("StrafingX", Mathf.Round(strafeParametersXZ.x * 100f) / 100f);
         animator.SetFloat("StrafingZ", Mathf.Round(strafeParametersXZ.z * 100f) / 100f);
 
+        //Request Lock-On
+        if (inputs.LockOn.PressedDown())
+            camControl.ToggleLockOn(camControl.LockedOn);
+
     }
 }

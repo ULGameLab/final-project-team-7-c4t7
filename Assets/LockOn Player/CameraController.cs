@@ -7,7 +7,8 @@ public class CameraController : MonoBehaviour
     [Header("Framing")]
     [SerializeField] private Camera camera = null;
     [SerializeField] private Transform followTransform = null;
-    [SerializeField] private Vector3 Framing = new Vector3(0, 0, 0);  //Used as offset from follow transform
+    //[SerializeField] private Vector3 Framing = new Vector3(0, 0, 0);  //Used as offset from follow transform
+    [SerializeField] private Vector3 Framing = Vector3.zero;  //Used as offset from follow transform
     private Vector3 planarDirection;  //Camera forward on the x, z plane
 
     [Header("Sensitivity")]
@@ -39,6 +40,12 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float checkRadius = 0.2f;  //How big of a radius for spherecast to check
     [SerializeField] private LayerMask obstructionLayers = -1;  //-1 sets it for all layers
     private List<Collider> ignoreColliders = new List<Collider>();  //List of colliders to be ignored
+
+    [Header("Lock-On")]
+    [SerializeField] private bool lockedOn;
+    [SerializeField] Transform target;
+    public bool LockedOn { get => lockedOn; }
+    public Transform Target { get => target; }
 
     public Vector3 CameraPlanarDirection { get => planarDirection; }
 
@@ -85,13 +92,35 @@ public class CameraController : MonoBehaviour
         if (invertX) { mouseX *= -1f; }
         if (invertY) { mouseY *= -1f; }
 
-        Vector3 focusPosition = followTransform.position + camera.transform.TransformDirection(Framing);
+        //Vector3 focusPosition = followTransform.position + camera.transform.TransformDirection(Framing);
+        Vector3 focusPosition = followTransform.position + followTransform.TransformDirection(Framing);
 
+        //Handle Lock-On
+        if (lockedOn && target != null)
+        {
+            Vector3 CamToTarget = target.transform.position - camera.transform.position;
+            Vector3 planarCamToTarget = Vector3.ProjectOnPlane(CamToTarget, Vector3.up);
+            Quaternion LookRotation = Quaternion.LookRotation(CamToTarget, Vector3.up);
+
+            planarDirection = planarCamToTarget != Vector3.zero ? planarCamToTarget.normalized : planarDirection;
+            targetVerticalAngle = Mathf.Clamp(LookRotation.eulerAngles.x, minVerticalAngle, maxVerticalAngle);
+            targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);
+        }
+        else
+        {
+            planarDirection = Quaternion.Euler(0, mouseX, 0) * planarDirection;
+            targetVerticalAngle = Mathf.Clamp(targetVerticalAngle + mouseY, minVerticalAngle, maxVerticalAngle);
+            targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);
+
+            Debug.DrawLine(camera.transform.position, camera.transform.position + planarDirection * 1000, Color.red);
+        }
+        /*
         planarDirection = Quaternion.Euler(0, mouseX, 0) * planarDirection;
         targetVerticalAngle = Mathf.Clamp(targetVerticalAngle + mouseY, minVerticalAngle, maxVerticalAngle);
         targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);
 
         Debug.DrawLine(camera.transform.position, camera.transform.position + planarDirection *1000, Color.red);
+        */
 
         //Handle Obstructions
         float smallestDistance = targetDistance;
@@ -111,8 +140,19 @@ public class CameraController : MonoBehaviour
         newPosition = Vector3.Lerp(camera.transform.position, targetPosition, Time.deltaTime * rotationSharpness);
 
         //Apply
-        camera.transform.rotation = newRotation;
+        //camera.transform.rotation = newRotation;
+        camera.transform.rotation = Quaternion.LookRotation(target.position - camera.transform.position, Vector3.up);
         camera.transform.position = newPosition;
 
     }
+    public void ToggleLockOn(bool Toggle)
+    {
+        //Early Out
+        if (Toggle == lockedOn)
+            return;
+
+        //Toggle
+        lockedOn = !lockedOn;
+    }
+
 }
