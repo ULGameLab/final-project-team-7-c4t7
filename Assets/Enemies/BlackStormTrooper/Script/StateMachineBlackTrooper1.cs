@@ -11,17 +11,12 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
     private NavMeshAgent NavAg;
 
     //States
-    public enum State { Idle, Chase, Shoot, Strafe, Patrol, Punch }
+    public enum State { Idle, Chase, Shoot, Patrol, Punch }
     public State CurState;
     private Dictionary<State, System.Action> enter;
     private Dictionary<State, System.Action> exit;
     private Dictionary<State, System.Action> execute;
-    //Strafe
-    private int timeToStrafe;
-    private Vector3 StrafeDestination;
-    private float xRandom = -7, zRandom = -7;
-    private int xNegative, zNegative;
-    private int backToShooting = 5;
+    
     //Patrol
     private Transform PatrolTarget, pTarget, pTarget1, pTarget2;
     private bool onPatrol = false;
@@ -76,7 +71,6 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
             {State.Idle, enterI },
             {State.Chase, enterC },
             {State.Shoot, enterS },
-            {State.Strafe, enterSt },
             {State.Patrol, enterP },
             {State.Punch, enterPu },
         };
@@ -85,7 +79,6 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
             {State.Idle, exitI },
             {State.Chase, exitC },
             {State.Shoot, exitS },
-            {State.Strafe, exitSt },
             {State.Patrol, exitP },
             {State.Punch, exitPu },
 
@@ -95,7 +88,6 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
             {State.Idle, executeI },
             {State.Chase, executeC },
             {State.Shoot, executeS },
-            {State.Strafe, executeSt },
             {State.Patrol, executeP },
             {State.Punch, executePu },
 
@@ -180,7 +172,6 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
     {
         theState.animationState = 3;
         fireGun = whenToFire;
-        timeToStrafe = 3;
         NavAg.speed = shootSpeed;
     }
     void exitS()
@@ -194,11 +185,13 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
         {
             Fire();
             if (Random.Range(0, 3) == 0)
-                fireGun = fireGun - (whenToFire / 10);
+            {
+                fireGun = 0;
+                fireGun = whenToFire - (whenToFire / 10);
+            }
             else
             {
-                fireGun = fireGun - whenToFire;
-                timeToStrafe--;
+                fireGun = 0;
             }
         }
 
@@ -209,8 +202,6 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
             Transition(State.Chase);
         if (!CanSee())
             Transition(State.Idle);
-        if (timeToStrafe < 1)
-            Transition(State.Strafe);
         if (Vector3.Distance(transform.position, Plyr.position) < 4)
             Transition(State.Punch);
     }
@@ -231,54 +222,7 @@ public class StateMachineBlackTrooper1 : MonoBehaviour
         bulletsFired.GetComponent<Rigidbody>().AddForce(bulletDirection * 1f, ForceMode.Impulse);
     }
     //Strafe//////////////////////////////////////////////////////////////
-    void enterSt()
-    {
-        NavAg.speed = runSpeed;
-        theState.animationState = 2;
-        StrafeDestination = transform.position + new Vector3(xRandom, 0f, zRandom);
-        backToShooting = 5;
-        StartCoroutine(shootAgain());
-
-    }
-    void exitSt()
-    {
-        StopCoroutine(shootAgain());
-    }
-    void executeSt()
-    {
-
-        NavAg.destination = StrafeDestination;
-
-        if (Vector3.Distance(StrafeDestination, transform.position) < 1.0f)
-        {
-
-            if (InRangeToChase())
-                Transition(State.Chase);
-            if (InRangeToShoot())
-                Transition(State.Shoot);
-            if (!InRangeToChase() && !InRangeToShoot())
-                Transition(State.Idle);
-            if (backToShooting < 1)
-                Transition(State.Shoot);
-        }
-
-
-    }
-    IEnumerator shootAgain()
-    {
-        backToShooting--;
-        xRandom = Random.Range(7, 15);
-        zRandom = Random.Range(7, 15);
-        xNegative = Random.Range(0, 2);
-        zNegative = Random.Range(0, 2);
-        if (xNegative == 1)
-            xRandom = -xRandom * (-1);
-        if (zNegative == 1)
-            zRandom = zRandom * (-1);
-        yield return new WaitForSeconds(1);
-
-
-    }
+   
     //Patrol/////////////////////////////////////////////////////////////////
     void enterP()
     {

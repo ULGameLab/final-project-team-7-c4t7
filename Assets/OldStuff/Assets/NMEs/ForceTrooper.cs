@@ -20,7 +20,7 @@ public class ForceTrooper : MonoBehaviour
         theForce = forceStatus.getForce();
         if ((TheDestination.transform.position - this.transform.position).sqrMagnitude < 4)
         {
-            if (Input.GetKeyDown(KeyCode.F) && theForce >= forceReduction)// if push it
+            if (UnityEngine.Input.GetKeyDown(KeyCode.F) && theForce >= forceReduction)// if push it
             {
                 StartCoroutine(Push());
                 //GetComponent<Rigidbody>().isKinematic = false;
@@ -28,7 +28,7 @@ public class ForceTrooper : MonoBehaviour
                 //GetComponent<Rigidbody>().isKinematic = true;
             }
 
-            if (PullReady && Input.GetKeyDown(KeyCode.R))// if pull it
+            if (PullReady && UnityEngine.Input.GetKeyDown(KeyCode.R))// if pull it
             {
                 StartCoroutine(Pull());
                 //GetComponent<Rigidbody>().isKinematic = false;

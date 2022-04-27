@@ -10,7 +10,7 @@ public class testScript : MonoBehaviour
     {
         if ((TheDestination.transform.position - this.transform.position).sqrMagnitude < 4)
         {
-            if (Input.GetKey(KeyCode.E))//if grab
+            if (UnityEngine.Input.GetKey(KeyCode.E))//if grab
             {
                 GetComponent<Rigidbody>().useGravity = false;
                 GetComponent<Rigidbody>().detectCollisions = true;
@@ -22,12 +22,12 @@ public class testScript : MonoBehaviour
                 this.transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
             }
-            if (Input.GetKeyDown(KeyCode.F))// if push it
+            if (UnityEngine.Input.GetKeyDown(KeyCode.F))// if push it
             {
                 GetComponent<Rigidbody>().AddForce(ThePlayer.transform.forward * 700);
             }
 
-            if (Input.GetKeyDown(KeyCode.R))// if pull it
+            if (UnityEngine.Input.GetKeyDown(KeyCode.R))// if pull it
             {
                 GetComponent<Rigidbody>().AddForce(ThePlayer.transform.forward * 700 * -1);
             }

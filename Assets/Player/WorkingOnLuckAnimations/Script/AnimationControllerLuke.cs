@@ -46,7 +46,7 @@ public class AnimationControllerLuke : MonoBehaviour
     void Update()
     {
         playWalk();
-        if (Input.GetButtonDown("Fire1"))
+        if (UnityEngine.Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Slashhhhh");
             LuckAnimatior.SetBool("Run", false);
@@ -62,13 +62,13 @@ public class AnimationControllerLuke : MonoBehaviour
             LuckAnimatior.SetBool("RunForce", false);
         }
         else
-        if (Input.GetButton("Fire2"))
+        if (UnityEngine.Input.GetButton("Fire2"))
         {
             
-            if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
+            if (UnityEngine.Input.GetKey(KeyCode.A)|| UnityEngine.Input.GetKey(KeyCode.D) || UnityEngine.Input.GetKey(KeyCode.S) || UnityEngine.Input.GetKey(KeyCode.W))
             {
                 
-                if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+                if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift) && UnityEngine.Input.GetKey(KeyCode.W))
                 {
                     
                     Debug.Log("Blockkkk walking");
@@ -86,7 +86,7 @@ public class AnimationControllerLuke : MonoBehaviour
                     LuckAnimatior.SetBool("RunCrouched", true);
                 }
                 else
-                if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.A))
+                if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift) && UnityEngine.Input.GetKey(KeyCode.A))
                 {
                     Debug.Log("Blockkkk walking");
                     LuckAnimatior.SetBool("Run", false);
@@ -103,7 +103,7 @@ public class AnimationControllerLuke : MonoBehaviour
                     LuckAnimatior.SetBool("RunCrouched", true);
                 }
                 else
-                if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.D))
+                if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift) && UnityEngine.Input.GetKey(KeyCode.D))
                 {
                     Debug.Log("Blockkkk walking");
                     LuckAnimatior.SetBool("Run", false);
@@ -154,16 +154,16 @@ public class AnimationControllerLuke : MonoBehaviour
             }
                 
         }else
-        if (Input.GetButtonUp("Fire2"))
+        if (UnityEngine.Input.GetButtonUp("Fire2"))
         {
             down = false;
             flag = false;
         }
         else   //&& !(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
-        if (Input.GetKey("w"))
+        if (UnityEngine.Input.GetKey("w"))
         {
             
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
             {
                 
                 LuckAnimatior.SetBool("Run", false);
@@ -180,7 +180,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
                 LuckAnimatior.SetBool("Run", false);
@@ -197,7 +197,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.E))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 LuckAnimatior.SetBool("Run", false);
                 LuckAnimatior.SetBool("Jump", false);
@@ -229,9 +229,9 @@ public class AnimationControllerLuke : MonoBehaviour
             
         }
         else
-        if (Input.GetKey("s"))
+        if (UnityEngine.Input.GetKey("s"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
             {
 
                 LuckAnimatior.SetBool("Run", false);
@@ -248,7 +248,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
                 LuckAnimatior.SetBool("Run", false);
@@ -265,7 +265,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.E))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 LuckAnimatior.SetBool("Run", false);
                 LuckAnimatior.SetBool("Jump", false);
@@ -297,9 +297,9 @@ public class AnimationControllerLuke : MonoBehaviour
             }
         }
         else
-        if (Input.GetKey("a"))
+        if (UnityEngine.Input.GetKey("a"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
             {
 
                 LuckAnimatior.SetBool("Run", false);
@@ -316,7 +316,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
                 LuckAnimatior.SetBool("Run", false);
@@ -333,7 +333,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.E))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 LuckAnimatior.SetBool("Run", false);
                 LuckAnimatior.SetBool("Jump", false);
@@ -364,9 +364,9 @@ public class AnimationControllerLuke : MonoBehaviour
             }
         }
         else
-        if (Input.GetKey("d"))
+        if (UnityEngine.Input.GetKey("d"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
             {
 
                 LuckAnimatior.SetBool("Run", false);
@@ -383,7 +383,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("went  tru");
                 LuckAnimatior.SetBool("Run", false);
@@ -400,7 +400,7 @@ public class AnimationControllerLuke : MonoBehaviour
 
             }
             else
-            if (Input.GetKeyDown(KeyCode.E))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 LuckAnimatior.SetBool("Run", false);
                 LuckAnimatior.SetBool("Jump", false);
@@ -431,7 +431,7 @@ public class AnimationControllerLuke : MonoBehaviour
             }
         }
         else
-        if (Input.GetKeyDown("space"))
+        if (UnityEngine.Input.GetKeyDown("space"))
         {
             LuckAnimatior.SetBool("Run", false);
             LuckAnimatior.SetBool("Jump", true);
@@ -446,7 +446,7 @@ public class AnimationControllerLuke : MonoBehaviour
             LuckAnimatior.SetBool("RunForce", false);
         }
         else
-        if (Input.GetKey("e"))
+        if (UnityEngine.Input.GetKey("e"))
         {
             LuckAnimatior.SetBool("Run", false);
             LuckAnimatior.SetBool("Jump", false);
@@ -461,7 +461,7 @@ public class AnimationControllerLuke : MonoBehaviour
             LuckAnimatior.SetBool("RunForce", false);
         }
         else
-        if (Input.GetKeyDown("r"))
+        if (UnityEngine.Input.GetKeyDown("r"))
         {
             LuckAnimatior.SetBool("Run", false);
             LuckAnimatior.SetBool("Jump", false);
@@ -476,7 +476,7 @@ public class AnimationControllerLuke : MonoBehaviour
             LuckAnimatior.SetBool("RunForce", false);
         }
         else
-        if (Input.GetKeyDown("f"))
+        if (UnityEngine.Input.GetKeyDown("f"))
         {
             LuckAnimatior.SetBool("Run", false);
             LuckAnimatior.SetBool("Jump", false);

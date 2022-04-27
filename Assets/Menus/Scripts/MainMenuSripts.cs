@@ -11,6 +11,7 @@ public class MainMenuSripts : MonoBehaviour
     public void GoToInstruction()
     {
         SceneManager.LoadScene("Instructions");
+
     }
     public void ExitGame()
     {

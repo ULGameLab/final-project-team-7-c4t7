@@ -27,8 +27,8 @@ public class PlayInputForForcePoint : MonoBehaviour {
 
     // Update is called once per frame
     void Update(){
-        float mouseX = Input.GetAxis("Mouse X") * mSens * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mSens * Time.deltaTime;
+        float mouseX = UnityEngine.Input.GetAxis("Mouse X") * mSens * Time.deltaTime;
+        float mouseY = UnityEngine.Input.GetAxis("Mouse Y") * mSens * Time.deltaTime;
         if (mouseY>=0) {
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);

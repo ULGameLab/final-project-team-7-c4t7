@@ -199,10 +199,13 @@ public class StateMachineBoba : MonoBehaviour
         {
             Fire();
             if (Random.Range(0, 3) == 0)
-                fireGun = fireGun - (whenToFire / 10);
+            {
+                fireGun = 0;
+                fireGun = whenToFire - (whenToFire / 10);
+            }
             else
             {
-                fireGun = fireGun - whenToFire;
+                fireGun = 0;
                 timeToStrafe--;
             }
         }

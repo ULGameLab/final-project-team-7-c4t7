@@ -32,8 +32,8 @@ public class PlayInput : MonoBehaviour {
 
     // Update is called once per frame
     void Update(){
-        float mouseX = Input.GetAxis("Mouse X") * mSens * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mSens * Time.deltaTime;
+        float mouseX = UnityEngine.Input.GetAxis("Mouse X") * mSens * Time.deltaTime;
+        float mouseY = UnityEngine.Input.GetAxis("Mouse Y") * mSens * Time.deltaTime;
        // Debug.Log("y: "+ TheDestination.position.y);
        // if (TheDestination.position.y >= 6) {
             xRotation -= mouseY;
@@ -57,7 +57,7 @@ public class PlayInput : MonoBehaviour {
         */
 
         // Lock On
-        if (!LockedOn && Input.GetKey(KeyCode.X))
+        if (!LockedOn && UnityEngine.Input.GetKey(KeyCode.X))
         {
             
         }
