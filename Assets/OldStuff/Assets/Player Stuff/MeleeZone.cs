@@ -37,7 +37,7 @@ public class MeleeZone : MonoBehaviour
         if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss")
         {
             sounds.PlayOneShot(slash);
-            HeathBar HB = other.gameObject.GetComponent<HeathBar>();
+            EnemyHealthBarScripts HB = other.gameObject.GetComponent<EnemyHealthBarScripts>();
             if (HB != null) { HB.TakeDamage(25f); }
         }
         

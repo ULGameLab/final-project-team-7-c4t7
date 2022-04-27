@@ -6,7 +6,7 @@ public class MainMenuSripts : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("DemoScene");
+        SceneManager.LoadScene(3);
     }
     public void ExitGame()
     {

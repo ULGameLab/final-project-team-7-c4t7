@@ -117,7 +117,7 @@ public class StateMachineTurret : MonoBehaviour
             if (Random.Range(0, 3) == 0)
                 fireGun = fireGun - (whenToFire / 10);
             else
-                fireGun = fireGun - whenToFire;
+                fireGun = 0;
         }
         
 
