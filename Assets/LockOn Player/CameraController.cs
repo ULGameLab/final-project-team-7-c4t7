@@ -60,6 +60,7 @@ public class CameraController : MonoBehaviour
     public Targetable Target { get => target; }
 
     public GameObject ForcePoint;
+    [SerializeField] private LayerMask playerLayer;
 
     /*
     [SerializeField] private Vector3 LockOnFraming = Vector3.zero;
@@ -133,6 +134,8 @@ public class CameraController : MonoBehaviour
             planarDirection = planarCamToTarget != Vector3.zero ? planarCamToTarget.normalized : planarDirection;
             targetVerticalAngle = Mathf.Clamp(LookRotation.eulerAngles.x, minVerticalAngle, maxVerticalAngle);
             targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);
+
+            ForcePoint.transform.position = target.TargetTransform.position;
         }
         else
         {
@@ -140,6 +143,14 @@ public class CameraController : MonoBehaviour
             planarDirection = Quaternion.Euler(0, mouseX, 0) * planarDirection;
             targetVerticalAngle = Mathf.Clamp(targetVerticalAngle + mouseY, minVerticalAngle, maxVerticalAngle);
             targetDistance = Mathf.Clamp(targetDistance + zoom, minDistance, maxDistance);
+
+            RaycastHit hit;
+            var ray = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 1000f, ~playerLayer) )
+            {
+                ForcePoint.transform.position = hit.point;
+            }
+            
 
             Debug.DrawLine(camera.transform.position, camera.transform.position + planarDirection * 1000, Color.red);
         }
@@ -163,7 +174,7 @@ public class CameraController : MonoBehaviour
         //Final Targets
         targetRotation = Quaternion.LookRotation(planarDirection) * Quaternion.Euler(targetVerticalAngle, 0, 0);
         targetPosition = focusPosition - (targetRotation * Vector3.forward) * smallestDistance;
-        ForcePoint.transform.position = focusPosition;
+        //ForcePoint.transform.position = focusPosition;
 
         //Handle Smoothing
         newRotation = Quaternion.Slerp(camera.transform.rotation, targetRotation, Time.deltaTime * rotationSharpness);
