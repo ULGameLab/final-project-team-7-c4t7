@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (24)
@@ -337,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (30)
@@ -411,7 +411,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (31)
@@ -485,7 +485,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (16)
@@ -515,7 +515,7 @@ PrefabInstance:
     - target: {fileID: 1946706910561513673, guid: be0790d8756ec7749a8b7beecbc29828, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 2873328066408375764, guid: be0790d8756ec7749a8b7beecbc29828, type: 3}
       propertyPath: m_Name
       value: rock3
@@ -883,7 +883,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (3)
@@ -957,7 +957,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (27)
@@ -1031,7 +1031,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -6279,7 +6279,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -6389,7 +6389,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (26)
@@ -6463,7 +6463,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (27)
@@ -6615,7 +6615,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (29)
@@ -6689,7 +6689,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (31)
@@ -6763,7 +6763,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (14)
@@ -6837,7 +6837,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (7)
@@ -6911,7 +6911,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (21)
@@ -6941,7 +6941,7 @@ PrefabInstance:
     - target: {fileID: 6351499843123168835, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 6351499843123168844, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -7373,7 +7373,7 @@ PrefabInstance:
     - target: {fileID: 6351499843123168835, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 6351499843123168844, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -7495,7 +7495,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (25)
@@ -7569,7 +7569,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (23)
@@ -7721,7 +7721,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (31)
@@ -7795,7 +7795,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (16)
@@ -7947,7 +7947,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (26)
@@ -8021,7 +8021,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (18)
@@ -8103,7 +8103,7 @@ PrefabInstance:
     - target: {fileID: 7514792965155233405, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
 --- !u!4 &325494051 stripped
@@ -8173,7 +8173,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (27)
@@ -8247,7 +8247,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (17)
@@ -8321,7 +8321,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (23)
@@ -8528,7 +8528,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (2)
@@ -8656,7 +8656,7 @@ PrefabInstance:
     - target: {fileID: 3471274621855825851, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7053554417189208661, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: m_RootOrder
       value: 56
@@ -8774,7 +8774,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (27)
@@ -8848,7 +8848,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (19)
@@ -8922,7 +8922,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (18)
@@ -9113,7 +9113,7 @@ PrefabInstance:
     - target: {fileID: 6575453687676741029, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7468304585811980468, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: m_Name
       value: rock5 (1)
@@ -9235,7 +9235,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (23)
@@ -9265,7 +9265,7 @@ PrefabInstance:
     - target: {fileID: 6263794293697483074, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7008353276663570149, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -9387,7 +9387,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (28)
@@ -9461,7 +9461,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (32)
@@ -10756,7 +10756,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (3)
@@ -10956,7 +10956,7 @@ PrefabInstance:
     - target: {fileID: 7514792965155233405, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
 --- !u!4 &583780383 stripped
@@ -11026,7 +11026,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (20)
@@ -11178,7 +11178,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (27)
@@ -11252,7 +11252,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (25)
@@ -11469,7 +11469,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (17)
@@ -11664,7 +11664,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (2)
@@ -11738,7 +11738,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (18)
@@ -11768,7 +11768,7 @@ PrefabInstance:
     - target: {fileID: 3471274621855825851, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7053554417189208661, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -11886,7 +11886,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (20)
@@ -11960,7 +11960,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (11)
@@ -12034,7 +12034,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (4)
@@ -12186,7 +12186,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (24)
@@ -12424,7 +12424,7 @@ PrefabInstance:
     - target: {fileID: 6351499843123168835, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 6351499843123168844, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -22374,7 +22374,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (10)
@@ -22448,7 +22448,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (8)
@@ -22600,7 +22600,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (29)
@@ -23184,7 +23184,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (29)
@@ -23336,7 +23336,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (12)
@@ -23410,7 +23410,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (12)
@@ -23484,7 +23484,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (26)
@@ -23558,7 +23558,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (25)
@@ -24388,7 +24388,7 @@ PrefabInstance:
     - target: {fileID: 6575453687676741029, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7468304585811980468, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: m_Name
       value: rock5 (3)
@@ -24510,7 +24510,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (26)
@@ -24584,7 +24584,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (23)
@@ -24658,7 +24658,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (5)
@@ -24815,7 +24815,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (28)
@@ -24845,7 +24845,7 @@ PrefabInstance:
     - target: {fileID: 6263794293697483074, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7008353276663570149, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -25049,7 +25049,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (13)
@@ -25142,6 +25142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
+--- !u!4 &1124571585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8841245588310014323, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
+  m_PrefabInstance: {fileID: 1124571584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1143049270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25160,7 +25165,7 @@ PrefabInstance:
     - target: {fileID: 6351499843123168835, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 6351499843123168844, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -25282,7 +25287,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (6)
@@ -25312,7 +25317,7 @@ PrefabInstance:
     - target: {fileID: 6351499843123168835, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 6351499843123168844, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -25434,7 +25439,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (19)
@@ -25508,7 +25513,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (1)
@@ -25582,7 +25587,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (11)
@@ -25656,7 +25661,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (19)
@@ -25730,7 +25735,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (17)
@@ -25804,7 +25809,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (10)
@@ -25878,7 +25883,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (24)
@@ -25952,7 +25957,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (25)
@@ -26026,7 +26031,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (18)
@@ -26221,7 +26226,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (18)
@@ -26295,7 +26300,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (27)
@@ -26369,7 +26374,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (15)
@@ -26443,7 +26448,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (16)
@@ -26517,7 +26522,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (29)
@@ -26825,7 +26830,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (28)
@@ -26907,7 +26912,7 @@ PrefabInstance:
     - target: {fileID: 7514792965155233405, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
 --- !u!4 &1385018505 stripped
@@ -26977,7 +26982,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (22)
@@ -27007,7 +27012,7 @@ PrefabInstance:
     - target: {fileID: 6575453687676741029, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7468304585811980468, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: m_Name
       value: rock5 (2)
@@ -27125,7 +27130,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (5)
@@ -27199,7 +27204,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (22)
@@ -27430,7 +27435,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (31)
@@ -27504,7 +27509,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (20)
@@ -27656,7 +27661,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (22)
@@ -27730,7 +27735,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (17)
@@ -27804,7 +27809,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (25)
@@ -27878,7 +27883,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (31)
@@ -28030,7 +28035,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (29)
@@ -32916,7 +32921,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (25)
@@ -33088,7 +33093,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (30)
@@ -33162,7 +33167,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (9)
@@ -33192,7 +33197,7 @@ PrefabInstance:
     - target: {fileID: 3471274621855825851, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7053554417189208661, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -33266,7 +33271,7 @@ PrefabInstance:
     - target: {fileID: 6575453687676741029, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7468304585811980468, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: m_Name
       value: rock5
@@ -33388,7 +33393,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (8)
@@ -33462,7 +33467,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (24)
@@ -33536,7 +33541,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (19)
@@ -33610,7 +33615,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (30)
@@ -33684,7 +33689,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (13)
@@ -33758,7 +33763,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (1)
@@ -34194,7 +34199,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (24)
@@ -34268,7 +34273,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (28)
@@ -34342,7 +34347,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (24)
@@ -34416,7 +34421,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (17)
@@ -34490,7 +34495,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (14)
@@ -39532,7 +39537,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (16)
@@ -39911,7 +39916,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (26)
@@ -39985,7 +39990,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (17)
@@ -44871,7 +44876,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (23)
@@ -44945,7 +44950,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (19)
@@ -50000,7 +50005,7 @@ PrefabInstance:
     - target: {fileID: 3471274621855825851, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7053554417189208661, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -50196,7 +50201,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (4)
@@ -50270,7 +50275,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (30)
@@ -50344,7 +50349,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (7)
@@ -50418,7 +50423,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (21)
@@ -50492,7 +50497,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (30)
@@ -50566,7 +50571,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (22)
@@ -50640,7 +50645,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (29)
@@ -55482,7 +55487,7 @@ PrefabInstance:
     - target: {fileID: 6575453687676741029, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7468304585811980468, guid: 8bc4a2a39e44cff4a9bf803cc886f0b9, type: 3}
       propertyPath: m_Name
       value: rock5 (4)
@@ -55560,7 +55565,7 @@ PrefabInstance:
     - target: {fileID: 6263794293697483074, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7008353276663570149, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -55686,7 +55691,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (33)
@@ -60678,7 +60683,7 @@ PrefabInstance:
     - target: {fileID: 7514792965155233405, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0813f28d5d57b4e448510a88a95176f7, type: 3}
 --- !u!4 &1887782631 stripped
@@ -60704,7 +60709,7 @@ PrefabInstance:
     - target: {fileID: 6263794293697483074, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7008353276663570149, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -60826,7 +60831,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (21)
@@ -60900,7 +60905,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (20)
@@ -60974,7 +60979,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (15)
@@ -61048,7 +61053,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (16)
@@ -61078,7 +61083,7 @@ PrefabInstance:
     - target: {fileID: 6351499843123168835, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 6351499843123168844, guid: 9a00969b800318848903e77cf4b84aed, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -61273,7 +61278,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (18)
@@ -61347,7 +61352,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (28)
@@ -61447,7 +61452,7 @@ PrefabInstance:
     - target: {fileID: 3471274621855825851, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7053554417189208661, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -61565,7 +61570,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (19)
@@ -61639,7 +61644,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (6)
@@ -61713,7 +61718,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (22)
@@ -61826,7 +61831,7 @@ PrefabInstance:
     - target: {fileID: 6263794293697483074, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7008353276663570149, guid: d0ef0d39c953c8a4d86acdcba8c23fde, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -62254,7 +62259,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (28)
@@ -62406,7 +62411,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (26)
@@ -62480,7 +62485,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (21)
@@ -62554,7 +62559,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7243962224881939833, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: m_Name
       value: Crate (9)
@@ -68041,7 +68046,7 @@ PrefabInstance:
     - target: {fileID: 3471274621855825851, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: TheDestination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571585}
     - target: {fileID: 7053554417189208661, guid: 79ef5deaca7aecf4c8ed3b0a24ef1eee, type: 3}
       propertyPath: m_RootOrder
       value: 0
