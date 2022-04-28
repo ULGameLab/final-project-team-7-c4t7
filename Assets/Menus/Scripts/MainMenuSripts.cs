@@ -6,7 +6,7 @@ public class MainMenuSripts : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("InfoScene");
+        SceneManager.LoadScene("Level1");
     }
     public void GoToInstruction()
     {

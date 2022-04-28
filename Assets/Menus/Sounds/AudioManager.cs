@@ -6,11 +6,13 @@ public class AudioManager : MonoBehaviour
 {
     public Sounds[] sounds;
     public String playOnAwake;
-    public bool dontDestroyWhenLoad = true;
+    public bool destroy = true;
 
     public static AudioManager instance;
     private void Awake()
     {
+        if (destroy)
+            Destroy(gameObject);
         if (instance == null)
             instance = this;
         else
@@ -18,8 +20,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        if(dontDestroyWhenLoad)
-            DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
         
         foreach (Sounds s in sounds)
         {

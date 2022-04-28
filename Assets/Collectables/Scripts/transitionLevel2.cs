@@ -6,7 +6,8 @@ public class transitionLevel2 : MonoBehaviour
 {
    void OnTriggerEnter(Collider other)
 {
-        SceneManager.LoadScene(4);
+        if(other.gameObject.tag == "Player")
+            SceneManager.LoadScene("Level2");
         //SceneManager.scene(4);
-}
+    }
 }
