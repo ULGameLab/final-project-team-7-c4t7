@@ -19,7 +19,16 @@ public class PlayerCharController : MonoBehaviour
     [SerializeField] private float DashRecharge = 1.5f;
     float dashTime;
 
-    [Header("Jump")]
+    [Header("Lightsaber")]
+    public AudioSource sounds;
+    public AudioClip swish;
+    //public GameObject BaseLightsaber;
+    //float Damage;
+    public GameObject StrikeZone;
+    bool AttackReady;
+    public GameObject DeflectZone;
+    bool DeflectReady;
+    public float DeflectWait;
 
 
 
@@ -57,6 +66,9 @@ public class PlayerCharController : MonoBehaviour
         animator.applyRootMotion = false;
 
         DashReady = true;
+
+        AttackReady = true;
+        DeflectReady = true;
 
     }
 
@@ -206,6 +218,34 @@ public class PlayerCharController : MonoBehaviour
             camControl.ToggleLockOn(!camControl.LockedOn);
         */
 
+        //Lightsaber
+        if (AttackReady && inputs.Attack.PressedDown())
+        {
+            sounds.PlayOneShot(swish);
+            StartCoroutine(Attacking());
+            StartCoroutine(AttackReadying());
+        }
+        /*
+        if (DeflectReady && Input.GetButtonDown("Fire2"))
+        {
+            StartCoroutine(Deflect());
+            StartCoroutine(DeflectReadying());
+        }
+        */
+        if (DeflectReady && inputs.Block.PressedDown())
+        {
+            //DeflectReady = false;
+            //BaseLightsaber.SetActive(false);
+            DeflectZone.SetActive(true);
+            AttackReady = false;
+        }
+        if (inputs.Block.PressedUp())
+        {
+            DeflectZone.SetActive(false);
+            // BaseLightsaber.SetActive(true);
+            AttackReady = true;
+        }
+
     }
 
     IEnumerator Dash()
@@ -244,6 +284,32 @@ public class PlayerCharController : MonoBehaviour
     public float GetDashRecharge()
     {
         return DashRecharge / 100;
+    }
+
+
+    IEnumerator Attacking()
+    {
+        DeflectReady = false;
+        AttackReady = false;
+        //BaseLightsaber.SetActive(false);
+        StrikeZone.SetActive(true);
+        //RepulseTimer = 0f;
+        yield return new WaitForSeconds(.05f);
+        StrikeZone.SetActive(false);
+        //   BaseLightsaber.SetActive(true);
+    }
+
+    IEnumerator AttackReadying()
+    {
+        yield return new WaitForSeconds(DeflectWait);
+        DeflectReady = true;
+        AttackReady = true;
+
+    }
+
+    public float GetWait()
+    {
+        return DeflectWait / 100;
     }
 
 }

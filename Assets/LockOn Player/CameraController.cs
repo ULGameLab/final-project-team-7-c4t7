@@ -59,6 +59,8 @@ public class CameraController : MonoBehaviour
     //public Transform Target { get => target; }
     public Targetable Target { get => target; }
 
+    public GameObject ForcePoint;
+
     /*
     [SerializeField] private Vector3 LockOnFraming = Vector3.zero;
     [SerializeField, Range(1, 179)] private float LockOnFOV = 40;
@@ -161,6 +163,7 @@ public class CameraController : MonoBehaviour
         //Final Targets
         targetRotation = Quaternion.LookRotation(planarDirection) * Quaternion.Euler(targetVerticalAngle, 0, 0);
         targetPosition = focusPosition - (targetRotation * Vector3.forward) * smallestDistance;
+        ForcePoint.transform.position = focusPosition;
 
         //Handle Smoothing
         newRotation = Quaternion.Slerp(camera.transform.rotation, targetRotation, Time.deltaTime * rotationSharpness);
