@@ -27,6 +27,11 @@ public class MainMenuSripts : MonoBehaviour
         
         SceneManager.LoadScene("Level2");
     }
+    public void GoToLockDemo()
+    {
+
+        SceneManager.LoadScene("Lock-On 2");
+    }
     public void GoToInfo()
     {
         SceneManager.LoadScene("InfoScene");
