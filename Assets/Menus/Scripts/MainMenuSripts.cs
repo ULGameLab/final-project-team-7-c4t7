@@ -25,7 +25,7 @@ public class MainMenuSripts : MonoBehaviour
     public void GoToDemo()
     {
         
-        SceneManager.LoadScene("2SceneTest");
+        SceneManager.LoadScene("Level2");
     }
     public void GoToInfo()
     {
