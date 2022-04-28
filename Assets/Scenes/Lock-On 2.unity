@@ -865,6 +865,29 @@ Transform:
   m_Father: {fileID: 607422939}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1981336696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3935079239428381921, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
+  m_PrefabInstance: {fileID: 4205619235329231474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1981336705 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7725865513236634657, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
+  m_PrefabInstance: {fileID: 4205619235329231474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1981336706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981336696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abec30e0567045547a022097bd97de8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LuckAnimatior: {fileID: 1981336705}
 --- !u!1001 &4205619235329231474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,9 +968,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7725865513236634657, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725865513236634657, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 967fc95bf07be574288c2da1996e42b0, type: 2}
+      objectReference: {fileID: 9100000, guid: 3776cfc5a916db8448988602fd026bb1, type: 2}
     - target: {fileID: 7725865513236634657, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
       propertyPath: m_WarningMessage
       value: 
