@@ -25152,6 +25152,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5919244936342448118, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
   m_PrefabInstance: {fileID: 1124571584}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1124571587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8841245588677756186, guid: fb812b97d3c4c5d4cbb460eaa34e9720, type: 3}
+  m_PrefabInstance: {fileID: 1124571584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f4edd72b1a75f43bc0d86d10a6638f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1143049270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55692,7 +55703,7 @@ PrefabInstance:
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: forceStatus
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124571587}
     - target: {fileID: 730842401750198019, guid: ac72f7c8323303948bcd8edca98ddf73, type: 3}
       propertyPath: TheDestination
       value: 
