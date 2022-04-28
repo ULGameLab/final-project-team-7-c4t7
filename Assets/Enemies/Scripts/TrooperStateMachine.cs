@@ -318,7 +318,7 @@ public class TrooperStateMachine : MonoBehaviour
         animation.SetBool("isRun", true);
         SPD = strafeSpeed;
         Vector2 tempv2 = Random.insideUnitCircle;
-        KPos = (Plyr.transform.position + (Random.RandomRange(7, 13) * Plyr.transform.forward) + (Random.Range(6, 12) * new Vector3(tempv2.x, 0f, tempv2.y)));//Roberto changed this It add a bit more randoness to the behavior
+        KPos = (Plyr.transform.position + (Random.Range(7, 13) * Plyr.transform.forward) + (Random.Range(6, 12) * new Vector3(tempv2.x, 0f, tempv2.y)));//Roberto changed this It add a bit more randoness to the behavior
         AI.destination = KPos;
         
     }
