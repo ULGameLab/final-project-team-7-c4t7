@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LightsaberController : MonoBehaviour
 {
+    private PlayerInputs inputs;
     public AudioSource sounds;
     public AudioClip swish;
     public GameObject BaseLightsaber;
@@ -17,6 +18,7 @@ public class LightsaberController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inputs = GetComponent<PlayerInputs>();
         AttackReady = true;
         DeflectReady = true;
     }
@@ -24,7 +26,7 @@ public class LightsaberController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (AttackReady && UnityEngine.Input.GetButtonDown("Fire1"))
+        if (AttackReady && inputs.Attack.PressedDown())
         {
             sounds.PlayOneShot(swish);
             StartCoroutine(Attack());
@@ -37,14 +39,14 @@ public class LightsaberController : MonoBehaviour
             StartCoroutine(DeflectReadying());
         }
         */
-        if (DeflectReady && UnityEngine.Input.GetButtonDown("Fire2"))
+        if (DeflectReady && inputs.Block.PressedDown())
         {
             //DeflectReady = false;
             BaseLightsaber.SetActive(false);
             DeflectZone.SetActive(true);
             AttackReady = false;
         }
-        if (UnityEngine.Input.GetButtonUp("Fire2"))
+        if (inputs.Block.PressedUp())
         {
             DeflectZone.SetActive(false);
            // BaseLightsaber.SetActive(true);
@@ -52,43 +54,7 @@ public class LightsaberController : MonoBehaviour
         }
 
     }
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-        float DMG = Damage;//scale damage based off of the bullet's speed.
-        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Player")
-        {
-            HeathBar HB = collision.gameObject.GetComponent<HeathBar>();
-            if (HB != null) { HB.TakeDamage(DMG); }
-        }
-        
-    }
-    */
-    /*
-    
-    IEnumerator Deflect()
-    {
-        DeflectReady = false;
-        DeflectZone.SetActive(true);
-        //RepulseTimer = 0f;
-        yield return new WaitForSeconds(.20f);
-        DeflectZone.SetActive(false);
-    }
 
-    IEnumerator DeflectReadying()
-    {
-        yield return new WaitForSeconds(DeflectWait);
-        DeflectReady = true;
-
-        /*
-        while (RepulseTimer != 1)
-        {
-            RepulseTimer += .01f;
-            yield return new WaitForSeconds(.01f);
-        }
-        */
-    //}
 
     IEnumerator Attack()
     {
@@ -108,18 +74,6 @@ public class LightsaberController : MonoBehaviour
         DeflectReady = true;
         AttackReady = true;
 
-        /*
-        while (RepulseTimer != 1)
-        {
-            RepulseTimer += .01f;
-            yield return new WaitForSeconds(.01f);
-        }
-        */
-    }
-
-    public bool GetRepulsorReady()
-    {
-        return DeflectReady;
     }
 
     public float GetWait()

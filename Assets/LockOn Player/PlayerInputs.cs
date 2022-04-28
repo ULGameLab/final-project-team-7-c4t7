@@ -27,7 +27,7 @@ public class Input
 public class PlayerInputs : MonoBehaviour
 {
     //Inputs
-    public Input Forward, Back, Right, Left, Sprint, Jump, Dash, Attack, Block, LockOn, Grab, Push, Pull;
+    public Input Forward, Back, Right, Left, /*Sprint,*/ Jump, Dash, Attack, Block, LockOn, Grab, Push, Pull;
 
     public int MoveAxisForward
     {
