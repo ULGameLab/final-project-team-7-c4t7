@@ -29,23 +29,52 @@ public class LockOnAnimations : MonoBehaviour
         }else
         if (inputs.Attack.PressedDown())
         {
-
+            LuckAnimatior.SetBool("force", false);
+            LuckAnimatior.SetBool("run", false);
             LuckAnimatior.SetBool("block", false);
             LuckAnimatior.SetBool("slash", true);
+
         }else
+        if (inputs.Attack.PressedUp())
+        {
+           
+            LuckAnimatior.SetBool("slash", false);
+        }
+        else
         if ( inputs.Block.PressedDown())
         {
+            LuckAnimatior.SetBool("force", false);
+            LuckAnimatior.SetBool("run", false);
             LuckAnimatior.SetBool("block", true);
             LuckAnimatior.SetBool("slash", false);
         }
         else
         if (inputs.Block.PressedUp())
         {
+            
+          //  LuckAnimatior.SetBool("block", false);
+          
+        }
+        else
+        if(inputs.Forward.Pressed() || inputs.Back.Pressed()|| inputs.Right.Pressed()|| inputs.Left.Pressed() )
+        {
+            LuckAnimatior.SetBool("force", false);
+            LuckAnimatior.SetBool("run", true);
+            LuckAnimatior.SetBool("block", false);
+            LuckAnimatior.SetBool("slash", false);
+        }
+        else
+        if(inputs.Grab.Pressed() || inputs.Push.Pressed() || inputs.Pull.Pressed())
+        {
+            LuckAnimatior.SetBool("force", true);
+            LuckAnimatior.SetBool("run", false);
             LuckAnimatior.SetBool("block", false);
             LuckAnimatior.SetBool("slash", false);
         }
         else
         {
+            LuckAnimatior.SetBool("force", false);
+            LuckAnimatior.SetBool("run", false);
             LuckAnimatior.SetBool("block", false);
             LuckAnimatior.SetBool("slash", false);
         }
