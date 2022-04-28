@@ -1103,19 +1103,13 @@ Animator:
   m_GameObject: {fileID: 3935079239428381921}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d52fa83137619b64ca8f21df12ed674d, type: 3}
-  m_Controller: {fileID: 9100000, guid: e6be174e720a0b54098d1dcd5745236f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 967fc95bf07be574288c2da1996e42b0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Hips'\n\tTransform 'Spine1'\n\tTransform 'LeftHandMiddle2'\n\tTransform
-    'Neck'\n\tTransform 'LeftHandThumb1'\n\tTransform 'LeftHandRing2'\n\tTransform
-    'LeftHandRing3'\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex2'\n\tTransform
-    'LeftHandPinky2'\n\tand more ...\n\tFrom animation clip 'Slash'\n\tFrom animation
-    clip 'Slash'\n\tFrom animation clip 'Great Sword Blockfbx'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
