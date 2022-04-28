@@ -12,10 +12,11 @@ public class AnimationControllerLuke : MonoBehaviour
     public  Vector3 cameraPos;  //this is the target position
     public Vector3 cameraOldPos; //this is the old position or the current 
     bool down, flag;
-
+    private PlayerInputs inputs;
     // Start is called before the first frame update
     void Start()
     {
+        inputs = GetComponent<PlayerInputs>();
         sounds.clip = LuckWalk;
         flag = false;
         down = false;
@@ -46,7 +47,7 @@ public class AnimationControllerLuke : MonoBehaviour
     void Update()
     {
         playWalk();
-        if (UnityEngine.Input.GetButtonDown("Fire1"))
+        if (inputs.Attack.Pressed())
         {
             Debug.Log("Slashhhhh");
             LuckAnimatior.SetBool("Run", false);
