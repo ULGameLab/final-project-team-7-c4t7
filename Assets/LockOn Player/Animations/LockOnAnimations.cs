@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LockOnAnimations : MonoBehaviour
 {
+    public AudioClip LuckWalk;
+    public AudioSource sounds;
     public Animator LuckAnimatior;
     private PlayerInputs inputs;
  
@@ -11,13 +13,33 @@ public class LockOnAnimations : MonoBehaviour
     void Start()
     {
         inputs = GetComponent<PlayerInputs>();
-
+        sounds.clip = LuckWalk;
     }
 
+    void playWalk()
+    {
+        if (LuckAnimatior.GetBool("run"))
+        {
+            if (!sounds.isPlaying)
+            {
+                Debug.Log("got in");
+                sounds.Play();
+            }
+        }
+        else
+        {
+            if (sounds.isPlaying)
+            {
+                Debug.Log("got out");
+                sounds.Stop();
+            }
+        }
+
+    }
     // Update is called once per frame
     void Update()
     {
-       
+        playWalk();
 
       //  strafing = camControl.LockedOn;
 
@@ -31,7 +53,7 @@ public class LockOnAnimations : MonoBehaviour
         {
             LuckAnimatior.SetBool("force", false);
             LuckAnimatior.SetBool("run", false);
-            LuckAnimatior.SetBool("block", false);
+            LuckAnimatior.SetBool("blockA", false);
             LuckAnimatior.SetBool("slash", true);
 
         }else
@@ -41,26 +63,19 @@ public class LockOnAnimations : MonoBehaviour
             LuckAnimatior.SetBool("slash", false);
         }
         else
-        if ( inputs.Block.PressedDown())
+        if (inputs.Block.PressedDown())
         {
             LuckAnimatior.SetBool("force", false);
             LuckAnimatior.SetBool("run", false);
-            LuckAnimatior.SetBool("block", true);
+            LuckAnimatior.SetBool("blockA", true);
             LuckAnimatior.SetBool("slash", false);
-        }
-        else
-        if (inputs.Block.PressedUp())
-        {
-            
-          //  LuckAnimatior.SetBool("block", false);
-          
         }
         else
         if(inputs.Forward.Pressed() || inputs.Back.Pressed()|| inputs.Right.Pressed()|| inputs.Left.Pressed() )
         {
             LuckAnimatior.SetBool("force", false);
             LuckAnimatior.SetBool("run", true);
-            LuckAnimatior.SetBool("block", false);
+            LuckAnimatior.SetBool("blockA", false);
             LuckAnimatior.SetBool("slash", false);
         }
         else
@@ -68,14 +83,14 @@ public class LockOnAnimations : MonoBehaviour
         {
             LuckAnimatior.SetBool("force", true);
             LuckAnimatior.SetBool("run", false);
-            LuckAnimatior.SetBool("block", false);
+            LuckAnimatior.SetBool("blockA", false);
             LuckAnimatior.SetBool("slash", false);
         }
         else
         {
             LuckAnimatior.SetBool("force", false);
             LuckAnimatior.SetBool("run", false);
-            LuckAnimatior.SetBool("block", false);
+            LuckAnimatior.SetBool("blockA", false);
             LuckAnimatior.SetBool("slash", false);
         }
         /*     if (strafing)
