@@ -40,7 +40,7 @@ public class Force : MonoBehaviour
         theForce = forceStatus.getForce();
         if ((TheDestination.transform.position - this.transform.position).sqrMagnitude < 24)
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.E) && theForce >= forceReduction)//if grab
+            if (UnityEngine.Input.GetKeyDown(KeyCode.CapsLock) && theForce >= forceReduction)//if grab
             {
                 //GetComponent<Rigidbody>().isKinematic = false;
                 //GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -64,7 +64,7 @@ public class Force : MonoBehaviour
                 //GetComponent<Rigidbody>().useGravity = true;
             }
             */
-            if (UnityEngine.Input.GetKeyDown(KeyCode.F) && theForce >= forceReduction)// if push it
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E) && theForce >= forceReduction)// if push it
             {
                 if (theForce > 100)
                 {
@@ -82,7 +82,7 @@ public class Force : MonoBehaviour
                 }
                 forceStatus.AddForce(-forceReduction);
             }
-            if (UnityEngine.Input.GetKeyDown(KeyCode.R) && theForce >= forceReduction)// if pull it
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Q) && theForce >= forceReduction)// if pull it
             {
                 if (theForce > 100)
                 {
@@ -112,7 +112,7 @@ public class Force : MonoBehaviour
           //  GetComponent<Rigidbody>().isKinematic = true;
         //    this.transform.parent = null;
       //  }
-        if (UnityEngine.Input.GetKeyUp(KeyCode.E))// release it
+        if (UnityEngine.Input.GetKeyUp(KeyCode.CapsLock))// release it
         {
             //CancelInvoke("Reposition1");
             GetComponent<Rigidbody>().useGravity = true;

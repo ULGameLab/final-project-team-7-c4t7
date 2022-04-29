@@ -58,7 +58,7 @@ public class ForceLevelStatus : MonoBehaviour
     }
     public void rechargeToMax()
     {
-        if (!UnityEngine.Input.GetKey(KeyCode.E) && !UnityEngine.Input.GetButton("Fire2") && currentForce < maxForce)
+        if (!UnityEngine.Input.GetKey(KeyCode.CapsLock) && !UnityEngine.Input.GetButton("Fire2") && currentForce < maxForce)
         {
 
             AddForce(1);
