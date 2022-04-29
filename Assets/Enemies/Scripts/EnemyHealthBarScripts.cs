@@ -59,6 +59,7 @@ public class EnemyHealthBarScripts : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+
         CurH -= dmg;
         if (CurH > MaxH) { CurH = MaxH; }//healing will inevitibly come up, and healing is just -damage. don't want to allow over healing (for now, may be something i try out later)
         if (CurH < 0) { CurH = 0; }      //this ensures that if you damage an enemy past the amount of health it has left, the healthbar dosen't fill backwards

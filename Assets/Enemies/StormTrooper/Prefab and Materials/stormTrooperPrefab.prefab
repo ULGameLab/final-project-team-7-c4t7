@@ -3089,7 +3089,6 @@ MonoBehaviour:
   shootSpeed: 1
   gunTip: {fileID: 6327528799417531208}
   bulletType: {fileID: 4361287648203001085, guid: fe286cc4436de9c46b190b8181e40d08, type: 3}
-  whenToFire: 5000
   sounds: {fileID: 3757496263353423034}
   pew: {fileID: 8300000, guid: dc79c97d8d454ef499136ce69f6c30e0, type: 3}
   theState: {fileID: 0}
@@ -3152,6 +3151,8 @@ MonoBehaviour:
   HBSl: {fileID: 5842177116600587818}
   CanObj: {fileID: 8638588283171977124}
   HldrT: {fileID: 605902391488053858}
+  sounds: {fileID: 3757496263353423034}
+  swish: {fileID: 8300000, guid: 4eab38bd2ac922a4d88260f0e3a6ed73, type: 3}
 --- !u!1 &7942121641097977270
 GameObject:
   m_ObjectHideFlags: 0

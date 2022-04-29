@@ -29,7 +29,7 @@ public class PlayerCharController : MonoBehaviour
     public GameObject DeflectZone;
     bool DeflectReady;
     public float DeflectWait;
-
+    public GameObject blockZone;
 
 
 
@@ -195,9 +195,7 @@ public class PlayerCharController : MonoBehaviour
             strafeParametersXZ = Vector3.Lerp(strafeParametersXZ, Vector3.forward * newSpeed, moveSharpness * Time.deltaTime);
         }
         //animator.SetFloat("Forward", newSpeed);
-        animator.SetFloat("Strafing", strafeParameter);
-        animator.SetFloat("StrafingX", Mathf.Round(strafeParametersXZ.x * 100f) / 100f);
-        animator.SetFloat("StrafingZ", Mathf.Round(strafeParametersXZ.z * 100f) / 100f);
+
 
         //Request Lock-On
         if (inputs.LockOn.PressedDown())
@@ -236,11 +234,15 @@ public class PlayerCharController : MonoBehaviour
         {
             //DeflectReady = false;
             //BaseLightsaber.SetActive(false);
+            blockZone.SetActive(true);
             DeflectZone.SetActive(true);
+
             AttackReady = false;
         }
         if (inputs.Block.PressedUp())
         {
+            
+            blockZone.SetActive(false);
             DeflectZone.SetActive(false);
             // BaseLightsaber.SetActive(true);
             AttackReady = true;
