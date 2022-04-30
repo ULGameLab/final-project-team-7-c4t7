@@ -72469,6 +72469,7 @@ GameObject:
   - component: {fileID: 7824743380753028824}
   - component: {fileID: 7824743380753028825}
   - component: {fileID: 1311022047807659031}
+  - component: {fileID: 7824743380753028828}
   m_Layer: 0
   m_Name: stormTrooperPrefab
   m_TagString: Enemy
@@ -72617,6 +72618,20 @@ MonoBehaviour:
   sounds: {fileID: 3757496263800851449}
   pew: {fileID: 8300000, guid: dc79c97d8d454ef499136ce69f6c30e0, type: 3}
   theState: {fileID: 0}
+--- !u!114 &7824743380753028828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824743380753028817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4a9476f0f9d34469ae89cc55d23f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetable: 1
+  targetTransform: {fileID: 0}
 --- !u!33 &7915069144478155843
 MeshFilter:
   m_ObjectHideFlags: 0
