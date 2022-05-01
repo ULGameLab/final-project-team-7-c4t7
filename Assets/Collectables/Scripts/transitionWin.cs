@@ -7,7 +7,11 @@ public class transitionWin : MonoBehaviour
       
    void OnTriggerEnter(Collider other)
 {
-        SceneManager.LoadScene(1);
-        //SceneManager.scene(1);
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(1);
+            //SceneManager.scene(1);
+        }
+
 }
 }
