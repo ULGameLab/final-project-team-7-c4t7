@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class EnemyHealthBarScripts : MonoBehaviour
 {
+
+    [SerializeField] public GameObject playerRef;
+    private CameraController camControl;
+
     [Header("Health")]
     [Tooltip("this is the max health it can have")]
     public float MaxH;
@@ -31,6 +35,8 @@ public class EnemyHealthBarScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camControl = playerRef.GetComponent<CameraController>();
+
         CurH = MaxH;
         CanObj.SetActive(false);
         InvokeRepeating("HealthRegen", 0.0f, 0.25f);
@@ -67,8 +73,8 @@ public class EnemyHealthBarScripts : MonoBehaviour
 
         if (CurH <= 0)
         {
+            //camControl.ToggleLockOn(!camControl.LockedOn);
             Destroy(this.gameObject);
-            
             Destroy(this.GetComponent<EnemyHealthBarScripts>());
             Destroy(CanObj);
             Destroy(this);
